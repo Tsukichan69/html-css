@@ -1,0 +1,13 @@
+.heading {
+  color: indianred;
+}
+
+.subheading {
+  font-style: italic;
+}
+
+.paragraph {
+  padding: 20px;
+  background-color: grey;
+  color: white;
+}

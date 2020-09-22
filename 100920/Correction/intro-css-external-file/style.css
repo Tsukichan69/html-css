@@ -1,0 +1,13 @@
+h1 {
+  color: indianred;
+}
+
+h3 {
+  font-style: italic;
+}
+
+p {
+  padding: 20px;
+  background-color: grey;
+  color: white;
+}

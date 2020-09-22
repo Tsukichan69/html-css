@@ -1,0 +1,56 @@
+body {
+  display: flex;
+
+  margin: 0;
+  height: 100vh;
+
+  flex-direction: column;
+}
+
+.l-header {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: blue;
+}
+
+.l-nav {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: green;
+}
+
+.l-main-section {
+  display: flex;
+  flex-grow: 1;
+  background-color: red;
+}
+
+.l-left-aside {
+  box-sizing: border-box;
+  width: 20%;
+  padding: 20px;
+
+  background-color: orange;
+}
+
+.l-main {
+  box-sizing: border-box;
+  width: 60%;
+  padding: 20px;
+
+  background-color: purple;
+}
+
+.l-right-aside {
+  box-sizing: border-box;
+  width: 20%;
+  padding: 20px;
+
+  background-color: cyan;
+}
+
+.l-footer {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: yellow;
+}

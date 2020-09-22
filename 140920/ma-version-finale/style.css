@@ -1,0 +1,138 @@
+/* ======================================== */
+/* BASE
+/* ======================================== */
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+
+  margin: 0;
+
+  min-width: 460px;
+  min-height: 100%;
+
+  flex-direction: column;
+
+  background-color: rgba(250, 250, 250, 0.4);
+
+  font-family: "Roboto", sans-serif;
+  color: #225da7;
+}
+
+/* ======================================== */
+/* IMAGE
+/* ======================================== */
+
+.image {
+  display: inline-flex;
+
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;
+
+  user-select: none;
+}
+
+.image > img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+/* ======================================== */
+/* TEXTE
+/* ======================================== */
+.text {
+  display: block;
+
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;
+
+  line-height: 1.33;
+  white-space: normal;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+
+.text--oneline {
+  white-space: nowrap;
+}
+/* ======================================== */
+/* HEADER
+/* ======================================== */
+.l-header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.lyon {
+  height: 150px;
+  filter: grayscale(100%) opacity(50%);
+}
+.lyon:not(:first-child) {
+  margin-top: 5px;
+}
+.header__title-wrapper {
+  display: flex;
+
+  position: absolute;
+
+  top: 65%;
+  left: 20%;
+
+  width: 60%;
+  height: 35%;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.45);
+}
+.center{
+  font-size: 2em;
+  font-family: "Righteous", cursive;
+  color: #e4342a;
+}
+/* ======================================== */
+/* NAV
+/* ======================================== */
+.l-nav{
+  display: flex;
+  
+  margin-top: 5px;
+
+  flex-direction: column;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 1);
+}
+.menu {
+  display: flex;
+}
+.menu-item {
+  display: flex;
+
+  position: relative;
+
+  border-bottom: 2px solid transparent;
+  padding: 10px 10px 8px 10px;
+
+  flex-direction: column;
+
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* ======================================== */
+/* MAIN
+/* ======================================== */
+
+/* ======================================== */
+/* FOOTER
+/* ======================================== */
