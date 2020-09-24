@@ -1,0 +1,87 @@
+/* Pour vérifier que l'on n'a pas fait d'erreur dans les balises ou le lien avec le css on met * {color : red} */
+
+/* sélecteur (= le nom de la balise à modifier) {
+  nomPropriete : valeur (= propriété(s) CSS) ;
+  propriété(s) CSS;
+ } */
+
+ /*----------------------------------*/
+
+
+ div {
+   /* border-style  continu (solid => couleur = couleur du texte), suppression (none), pointillé(dashed), pointillés ronds (dotted), double (double) etc
+   !!! attention la bordure ne s'affichera que si border-style est spécifié dans le CSS */ 
+   
+   /* border-width = épaisseur de la bordure en px*/
+   /* border-color = couleur de la bordure, s'exprime en anglais ou en rgb (de 0 à 255 en valeur,valeur,valeur) ou en exadécimal (#000000) 
+   On peut regrouper : 
+   border : 2px #225685 dashed (= bordure bleue en pointillé de 2px)
+   
+   /* border-radius : 4px (bordure arondie, le nombre donné donne le nbr de pixel entre le début et la fin de l'arrondi)  
+   ! Possibilité de faire un rond parfait, en connaissant la taille de la boite et en mettant 50%
+   ! si on met deux valeurs,il y aura une incidence sur 2, 4 valeurs = 4 coins en tournant dans le sens des aiguilles d'une montre
+   
+   /*box-shadow : 1px (décalage horizontal) 2px (décalage vertical) 3px (valeur de l'ombre) #e07965 (couleur de l'ombre portée)*/
+   border : none;
+   box-shadow : 0 0 3px #999999;
+   
+   padding : 10px 10px 50px 10px;
+   margin: 20px;
+   
+   font-family: Arial, Helvetica, sans-serif; /* ce ne sera pas hérité par h2 car c'est le plus précis qui prime */
+   font-size: 0.8em /* va modifier la taille du titre, car il se base sur la taille de la div pour calculer son 1.3em*/;
+ }
+
+ h2 {
+   /* famille de police : serif/sans serif, cursive, fantasy, monospace...*/
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   /*^Police préférée, puis suivantes si aucunes polices installées*/
+   font-size: /* 1.3em; */ 1.6em ;
+   /*text-transform: uppercase ; transforme le texte, on se sert souvent de lowercase (minuscule) uppercase (majuscule), capitalize met les premières lettres de chaque mot en majuscule;*/
+   font-variant: small-caps; /* met tout en capitale mais avec la première lettre en majuscule*/
+
+   border-bottom: 2px solid #bdd8fb;
+   margin-top: 0;
+   margin-bottom : 10px;
+ }
+
+ img {
+   float: right; /* va décrocher l'élément du flux et le mettre à droite, sans pour autant dépasser l'élément précédent. Les éléments du dessous vont avoir envie de remonter sur le côté*/
+   margin : 0 0 8px 8px ;
+ }
+
+ p, ul {
+   line-height: /* définit l'interligne, par défaut l'interligne est de 120% donc 1.2em*/ 1.7em;
+   margin-top: 0;
+ }
+  /* en mettant la virgule, on applique les paramètres aux deux valeurs*/
+
+/*couleurs des liens :*/
+
+a {
+  color: #0645ad;
+  text-decoration: none; /*ajouter des traits entre autre, souligner : underline, enlever le soulignement : none, barrer le texte : line-through, mettre une ligne au dessus : overline*/
+}
+
+span {
+  font-style: italic; /*sur un "em" on utilisera le font-style : normal pour contrebalancer le fait que "em" mette en italique*/
+}
+
+.suite { /* .classe ou #identifiant*/
+/*margin-left: 20px : va décaler la marge;
+text-indent : sert à créer les alinéas sur les paragraphes, ne fait pas comme une marge, qui elle va tout aligner
+padding-left : va agrandir le padding, sans faire de différence */
+padding-left : 20px ; /* ou text-indent fonctionnera aussi*/
+
+background-image : url(./etoileGrise.svg) /*sert à mettre une image*/;
+background-repeat: no-repeat; /* ne fera pas de répétition de l'image de fond, la valeur par défault est donc repeat */
+background-size : 10px ;
+background-position : 2px 50% ;
+/*va régler la taille et la position de l'étoile qui est le background */
+
+/* pour tout résumer :
+background : (couleur du fond) url(./etoileGrise.svg) 2px 50% no-repeat
+le background-size est à noter à part */
+}
+
+.submenu

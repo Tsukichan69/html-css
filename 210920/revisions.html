@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" /> <!-- table de caractères (accents) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!--Pour le responsive-->
     <title>Accueil Wikipedia</title>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <main>
@@ -19,13 +20,13 @@
         <p>Les deux cahiers du <a href="#">Clavier bien tempéré</a> sont considérés comme une <a href="#">référence</a> par nombre de <a href="#">compositeurs</a> et de <a href="#">pédagogues</a>. D'abord recopiés par les musiciens, puis édités au début du xixe siècle, outre le plaisir musical du <a href="#">mélomane</a>, ils servent depuis le xviii<sup>e</sup> siècle à l'étude de la <a href="#">pratique du clavier </a> et à l'<a href="#">art de la composition</a>.</p>
 <!--l'image de l'étoile n'est pas de l'information, donc on la mettra plutôt en CSS en décoration
         <p> <img src="./etoileGrise.svg" alt="etoile grise">-->
-          <a href="#">Lire la suite</a></p>
+          <p class= "suite"><a href="#">Lire la suite</a></p>
 <!--Plutôt faire une liste pour les liens, le premier · va disparaître en CSS
         <p>
           <a href="#">Contenus de qualité</a> · <a href="#">Bons contenus</a> ·
           <a href="#">Sélection</a> · <a href="#">Programme</a>
         </p>-->
-        <ul>
+        <ul class ="submenu">
           <li><a href="#">Contenus de qualité</a></li>
           <li><a href="#">Bons contenus</a></li>
           <li><a href="#">Sélection</a></li>
@@ -49,7 +50,7 @@
 
           <li><strong><a href="#">Zheng He</a></strong> était à la tête de l’exploration maritime de la Cour impériale chinoise qui alla jusqu’aux côtes africaines au début du <a href="#">xv<sup>e</sup> siècle</a>.</li>
         </ul>
-        <ul>
+        <ul class="submenu">
           <li><a href="#">Archives</a></li>
           <li><a href="#">Propositions</a></li>
           <li><a href="#">Programme</a></li>
