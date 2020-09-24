@@ -71,12 +71,12 @@ span {
 /*margin-left: 20px : va décaler la marge;
 text-indent : sert à créer les alinéas sur les paragraphes, ne fait pas comme une marge, qui elle va tout aligner
 padding-left : va agrandir le padding, sans faire de différence */
-padding-left : 20px ; /* ou text-indent fonctionnera aussi*/
+  padding-left : 20px ; /* ou text-indent fonctionnera aussi*/
 
-background-image : url(./etoileGrise.svg) /*sert à mettre une image*/;
-background-repeat: no-repeat; /* ne fera pas de répétition de l'image de fond, la valeur par défault est donc repeat */
-background-size : 10px ;
-background-position : 2px 50% ;
+  background-image : url(./etoileGrise.svg) /*sert à mettre une image*/;
+  background-repeat: no-repeat; /* ne fera pas de répétition de l'image de fond, la valeur par défault est donc repeat */
+  background-size : 10px ;
+  background-position : 2px 50% ;
 /*va régler la taille et la position de l'étoile qui est le background */
 
 /* pour tout résumer :
@@ -84,4 +84,32 @@ background : (couleur du fond) url(./etoileGrise.svg) 2px 50% no-repeat
 le background-size est à noter à part */
 }
 
-.submenu
+.submenu li /*si on met une virgule ça veut dire que ça s'applique aux deux, si on n'en met pas le CSS cherche l'enfant 
+!! en mettant un chevron, le CSS va chercher l'enfant DIRECT, alors que si on ne le met pas ça ne cherche pas forcément l'enfant direct*/
+{
+  display: inline;
+/* il y a un padding de base pour les listes pour laisser la place aux puces ! */
+/*le display inline fait en sorte que la liste se comporte comme du texte, et donc que le text-align fonctionne sur elles*/
+  font-weight: 700; /*on va utiliser des valeurs qui vont de 100 à 900, le 400 est le normal, par incrément de 100*/
+}
+
+/*!! on va mettre le text-align dans les ul sinon le texte se collerait dans les "boites" des li, ce ne seraient pas les li qui se colleraient à droite*/
+
+.submenu {
+  padding-left: 0;
+  /* on pourrait écrire ul.submenu pour spécifier que seuls les ul ayant la classe submenu ont ces propriétés, ce serait utile dans le cas où des li auraient la classe submenu elles aussi*/
+  text-align: right;
+}
+
+/*pour sélectionner les paragraphes qui ont un grand frère direct image on va noter "img+p" on va donc sélectionner uniquement le paragraphe qui a un grand frère juste au dessus de lui en img
+
+! si on voulait faire les liens du premier paragraphe en rouge on noterait "img+p a" en color red */
+
+.submenu li+li {
+  margin-left: 10px;
+}
+/* on veut donner un margin left à toutes les li sauf la première donc on dit à toutes les li qui ont un grand frère li de prendre cette caractéristique, donc la première ne sera pas impactée */
+
+img+ul {
+  padding-left: 25px;
+}
