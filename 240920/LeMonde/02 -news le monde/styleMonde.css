@@ -1,20 +1,26 @@
-div {
-  background-color : #e7f4f7 ;
+html {
+  font-size : 90%
+}
+
+body {
   font-family: Arial, Helvetica, sans-serif;
-  font-size : 0.8em;
+}
+
+/* autant aller au plus haut pour ce qui devra tout affecter */
+div {
+  background : #e7f4f7  url(./images/fond-num.png) no-repeat bottom right;
   width: 665px;
   border : 1px lightgrey solid ;
-  margin-top : 10px ; 
-  background-image: url(./images/fond-num.png);
-  background-repeat: no-repeat ; 
-  background-position: bottom right;
+  margin: 20px auto;
+  padding : 8px ;
   /*mettre un padding à la div permettra de ne pas avoir à gérer le margin des éléments intérieurs*/
 }
 
 h3 {
-  margin : 4px;
+  margin : 0;
   background-image: url(./images/fd-degrade.png);
   background-repeat: no-repeat;
+  padding : 4px 8px;
 }
 
 ul {
