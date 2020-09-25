@@ -1,4 +1,0 @@
-trait bleu : #bdd8fb
-Liens : #0645ad
-visités : #0b0080
-ombre grise : #999
