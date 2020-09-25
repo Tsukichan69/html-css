@@ -7,36 +7,42 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <div class="conteneur"><!--Plutôt utiliser article pour le conteneur général, car c'est un article qui parle d'une lessive-->>
-    <h2>Baril de lessive C. Walker (5 litres)</h2>
-  <!--Mettre les div en float left pour qu'elles s'alignent les unes à côté des autres-->
-  <div class="article">
-    <div class="block1">
-  <!--Mettre un fond blanc à l'image ?-->
+  <article class="conteneur"><!--Plutôt utiliser article pour le conteneur général, car c'est un article qui parle d'une lessive-->
+    <!--Plutôt mettre des sections car l'article est séparé en 3 sections, une partie présentation, une partie argumentaire et une partie bouton-->
+    <!-- Ma version :
+    ((((<div class="article">
+    <div class="block1">)))) -->
+    <h1>Baril de lessive C. Walker (5 litres)</h1>
+    <div class="boite">
+      <!--==================================PREMIERE COLONNE===================================-->
+      <section class="block1">
     <figure><img src="./images/visuel-lessive.png" alt="Lessive C. Walker : La seule lessive qui peut diviser les taches par zéro!"></figure>
-  <!--Mettre l'information en gras-->
-    <h4>Informations sur le produit</h4>
-  <!--Changer les puces en étoiles-->
+  <!--Respecter l'arrivée des titres pour la numérotation, la taille n'est pas un critère de choix
+    ((((<h4>Informations sur le produit</h4>))))-->
+        <h3>Informations sur le produit</h3>
     <ul>
       <li>Volume net: 5 L</li>
       <li>Contient 0,03 g/L d'extraits de cheuquenaurice (nauricia sequae)</li>
       <li>Livré en 48h et 3s.</li>
       <li>Stetson et Santiags en option</li>
     </ul>
-    </div>
-    <div class="block2">
+  </section>
+    <!--==================================DEUXIEME COLONNE===================================-->
+    <section class="block2">
   <!--Mettre le premier p en rouge et gras-->
-      <p>Échangeriez-vous un baril de lessive C. Walker contre deux barils de lessive X? Pour rien au monde.</p>
+      <h2>Échangeriez-vous un baril de lessive C. Walker contre deux barils de lessive X? Pour rien au monde.</h2>
       <p>Comme nous, vous savez que si la lessive C. Walker lave plus blanc (y compris le noir et les couleurs...), c'est avant tout grâce à sa formule brevetée aux extraits de cheuquenaurice. Personne n'oserait défier la lessive C. Walker!</p>
   <!--mettre en gras-->
-      <h4>Le saviez-vous?</h4>
+      <h3>Le saviez-vous?</h3>
       <p>La cheuquenaurice n'attaque pas les tâches, elle les atomise... tout en conservant à votre linge l'éclat de ses couleurs, son moelleux, et son caractère délicieusement rétro. Avec la cheuquenaurice, votre linge fleure bon les années 1990.</p>
-    </div>
-    <div class="block3">
-  <!--création du bouton avec survol-->
-      <p>Commandez maintenant!</p>
+    </section>
+    <!--==================================TROISIEME COLONNE===================================-->
+    <div class="btn">
+  <!--création du bouton avec survol
+      <p>Commandez maintenant!</p>-->
+      <a href="#">Commandez maintenant !</a>
     </div>
   </div>
-</div>
+  </article>
 </body>
 </html>
