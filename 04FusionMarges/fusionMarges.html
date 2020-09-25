@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fusion des marges</title>
+  <style>
+    article {
+      box-sizing: border-box;
+      width : 600px;
+      background-color: darkkhaki;
+      /* On apperçoit des marges en laissant comme ça, c'est le margin des "p", on va donc essayer de mettre un margin */
+      margin : 100px;
+      /* On n'aura pas de margin 200 mais un seul margin, car les margin se fusionnent, mais cela ne fonctionne pas si on passe tout en float */
+    }
+    /* Pour sélectionner le nième article, on va utiliser un sélecteur plus rafiné : */
+    article:nth-of-type(2){ /*On peut écrire "2n+1" pour appliquer à tous les articles impairs, "2n" pour les articles pairs*/
+      margin: 50px;}
+  </style>
+</head>
+<body>
+  <article>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam id voluptates distinctio temporibus quis officia vero dolor magnam incidunt. Beatae, corrupti reprehenderit voluptatum pariatur amet cupiditate neque ipsam nobis. Enim, architecto repudiandae! Quasi quis voluptates modi ipsam, eos beatae nobis labore libero. Sint consectetur dolorum, corporis repellat porro, consequatur ducimus, earum beatae repellendus blanditiis laboriosam delectus! Nostrum ipsa nihil ipsam iusto sapiente laborum corrupti at et velit, consequatur ab omnis quisquam tempore, molestiae, cumque magni labore dignissimos. Id accusamus inventore deleniti repudiandae molestiae aliquid, fugiat necessitatibus a nulla vel placeat nostrum aspernatur eveniet eligendi, eaque cum mollitia sapiente vitae quisquam?</p>
+  </article>
+  <article>
+    <p>Voluptate illo voluptas, error ut quam, quasi ullam quis corrupti recusandae non magni libero quaerat aut totam expedita at optio pariatur eos sequi adipisci consequatur tenetur. Natus a ea consectetur. Labore sit mollitia similique nam magni reprehenderit asperiores a totam eveniet voluptas quis dicta corporis aspernatur repellendus nihil quae explicabo molestiae accusamus laborum dolor omnis laudantium, voluptatum libero? Delectus tenetur sapiente molestias placeat numquam, sed eum nemo aperiam, maiores tempore ducimus perferendis voluptatum aut, ipsam facilis nesciunt eveniet hic! Ex laborum quis quaerat voluptates id sed non assumenda maxime iste obcaecati alias, reprehenderit animi qui aliquid voluptas ipsa rerum sequi.</p>
+  </article>
+  <article>
+    <p>Aspernatur, architecto eaque earum deleniti facere modi porro repellendus quam necessitatibus optio labore explicabo illo molestias, quasi pariatur natus! Delectus inventore qui dolorem iusto, quasi sapiente, nesciunt quos repudiandae totam provident voluptatum quas accusantium, sunt omnis molestias autem eaque in labore minima tempore. Error quas nihil, tempora repellendus maiores cupiditate voluptatem ullam vero! Totam reprehenderit nesciunt voluptates amet illum beatae exercitationem laborum dolore pariatur numquam tempora molestiae doloremque ea officia, quaerat laboriosam impedit inventore nam aut magni sapiente? Velit, iste. Eum at laborum facilis a aperiam autem eaque veritatis doloremque perferendis hic accusamus error, suscipit natus dolorum exercitationem fugiat officia.</p>
+  </article>
+</body>
+</html>
