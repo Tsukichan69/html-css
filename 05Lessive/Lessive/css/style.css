@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'chunkfiveregular';
+  src: url('../fonts/chunkfive-regular-webfont.woff2') format('woff2'),
+       url('../fonts/chunkfive-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 90%;
@@ -7,8 +15,13 @@ html {
 .conteneur {
   width: 724px;
   padding: 25px;
+  /*Mais attention ! la boite ne fera plus la bonne taille ! On met donc la propriété box-sizing, qu'on aurait pu aussi mettre dans le body pour ne plus avoir à le gérer*/
+  box-sizing: border-box;
   background-color :#e4dfa4;
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px rgba(00, 00, 00,0.7);
 }
+
 .boite {
   display: flex;
 }
@@ -29,17 +42,20 @@ html {
 
 h1 {
   background-color : black;
+  font-family: chunkfiveregular, serif;
   color: white;
-  border-radius: 0 50px 0 0;
-  margin: 0;
-  padding: 4px 2px;
+  font-weight: 400; /* Pour enlever le gras*/
+  border-radius: 3px 150px 3px 3px / 3px 35px 3px 3px;
+  margin-top: 0;
+  padding: 4px;
 }
-
+/*on peut mettre "section figure" pour nous y retrouver dans le cas où il y aurait aussi un footer un header etc avec des images */
 figure {
   background-color : white;
-  padding : 20px 40px;
-  display : inline-flex ;
-  margin-left : 0;
+  padding : 13px 0;
+  text-align: center;
+  /*l'image réagit comme du texte, c'est de type align donc on peut la faire se comporter comme du texte ! */
+  margin : 0;
 }
 
 h3 {
@@ -48,6 +64,11 @@ h3 {
 
 ul {
   list-style-image: url(../images/etoile.png);
+  padding-left : 20px;
+}
+
+li+li {
+  margin-top : 10px;
 }
 
 h2 {
@@ -61,7 +82,6 @@ h2 {
   text-align: center;
   background-color: #cabf3e;
   border: white 1px solid;
-  margin-top: 10px;
   padding : 5px;
   border-radius: 6px;
 }
