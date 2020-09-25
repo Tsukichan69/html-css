@@ -10,7 +10,9 @@ body {
 div {
   background : #e7f4f7  url(./images/fond-num.png) no-repeat bottom right;
   width: 665px;
-  border : 1px lightgrey solid ;
+  /*!!! l'article est plus large car il comprend le width + le border + le padding, il fait donc 665 + 8*2 + 2*2, mais si on veut que l'article complet (la boite, comparaison carton / écran) fasse 665px on va se servir de border box sinon il faudrait faire witdh = article - border - padding*/
+  box-sizing: border-box;
+  border : 2px lightgrey solid ;
   margin: 20px auto;
   padding : 8px ;
   /*mettre un padding à la div permettra de ne pas avoir à gérer le margin des éléments intérieurs*/
@@ -31,21 +33,37 @@ ul {
 a {
   color : #636363; 
 }
-
+/* Plutôt mettre une classe car on peut avoir plusieurs dates pour le même article ! 
 h3+p {
   text-align: right;
-  font-size: 0.5em;
+  font-size: 0.75em;
+  margin-top: 0%;
+} */
+.date {
+  text-align: right;
+  font-size: 0.75em;
+  margin-top: 0;
 }
-
+/* 
 img {
   float: left;
   margin : 2px 8px 8px 4px ;
+} */
+figure {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+p {
+  margin-top: 0;
+  line-height: 1.4em;
+  font-size: 0.95em;
 }
 
 strong {
   color: #0000ff;
 }
-
+ /*on peut éviter cette propriété en mettant les strong à l'extérieur des a*/
 a strong {
   color : #636363;
 }
