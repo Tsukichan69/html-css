@@ -12,6 +12,11 @@ html {
 }
 /* Body {margin : 0;}*/
 
+/* Pour appliquer une caractéristique à toutes les balises il vaut mettre un sélecteur universel : 
+* {
+  box-sizing : border-box;
+} */
+
 .conteneur {
   width: 724px;
   padding: 25px;
@@ -30,14 +35,10 @@ html {
   width: 210px;
   margin-right : 25px;
 }
-
+/*on aurait pu mettre section+section*/
 .block2 {
   width : 260px;
   margin-right : 29px;
-}
-
-.block3 {
-  width : 150px;
 }
 
 h1 {
@@ -53,9 +54,14 @@ h1 {
 figure {
   background-color : white;
   padding : 13px 0;
-  text-align: center;
-  /*l'image réagit comme du texte, c'est de type align donc on peut la faire se comporter comme du texte ! */
+  /*text-align: center;
+  l'image réagit comme du texte, c'est de type align donc on peut la faire se comporter comme du texte ! */
   margin : 0;
+  display : flex;
+}
+
+figure img {
+  margin: auto;
 }
 
 h3 {
@@ -73,10 +79,18 @@ li+li {
 
 h2 {
   color : #680000;
-  font-size : 0.95em;
+  font-size : 1em; /*en mettant 1em on change quand même la police puisque le titre a une très grosse police 1em=taille par défaut du paragraphe. On pourrait aussi mettre inherit = hérite de la propriété du block*/
+  margin-top :0;
+  line-height: 1.35em;
 }
 
-.btn {
+p {
+  line-height: 1.35em;
+/*va permettre de rendre le tout plus lisible*/
+}
+
+/* on utilise souvent la classe "CTA" pour les liens / boutons car ça appelle à l'action "Call To Action" */
+/* (((.btn {
   width: 150px;
   height: 40px;
   text-align: center;
@@ -91,6 +105,40 @@ h2 {
   text-decoration: none;
 }
 
+!!! pour gérer les états du bouton on se sert d'une pseudo classe :
+- normal  (on n'en met généralement pas)
+- survol : ": hover"
+- click : : ": active"
+- visité  : ": visited"
+- focus : ": focus" (pour l'accessibilité)
+! il y a un ordre à respecter pour mettre ces caractéristiques là : le visited prend complètement la priorité sur le reste s'il est écrit en bas, on le place donc tout en haut (avant hover) pour que les propriétés qui arrivent après. On se sert de LoVe HAte (Lien, Visited, Hover, Active)
+
 .btn :hover {
   background-color : #928F69;
+} */
+
+/* Pour que le lien prenne tout l'espace dont il dispose il suffit de passer le lien en block pour qu'il prenne toute la place ! */
+.btn {
+  width: 150px;
+  text-align: center;
 }
+
+.btn a {
+  display : block;
+  color: #680000;
+  background-color: #cabf3e;
+  border: white 1px solid;
+  padding : 8px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  /* Ajout de la transition */
+  transition-property: background-color, color;
+  transition-duration: 1500ms, 3000ms;
+  /* la transition permet de ne pas surcharger dans un menu déroulant*/
+}
+/* On met le lien en hover, sinon l'utilisateur ne pourra pas vraiment cliquer sur le bouton*/
+.btn a:hover, .btn a:focus {
+  background-color: #928F69;
+  color: #ffffff;
+}
+/*ajouter le focus va améliorer l'accessibilité*/
