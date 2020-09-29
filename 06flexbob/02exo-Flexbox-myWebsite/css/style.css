@@ -1,0 +1,133 @@
+body {
+  width: 1024px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 80%;
+  margin : 0;
+}
+figure {
+  margin : 0;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+}
+/* =============================NAV============================== */
+nav {
+  background-color :#373c3f;
+  display: flex;
+  justify-content: flex-start ; 
+  align-items: center;
+  height: 100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav a {
+  display: block;
+  color : #ebebeb;
+  margin : 0 10px;
+  transition: background-color 1000ms 250ms;
+  font-size: 1.2em;
+}
+
+nav a:hover, nav a:focus{
+  background-color : grey
+}
+/* =============================FOND BLEU============================== */
+.fondBleu {
+  background-color : #0da4ba;
+  color : #ffffff; 
+  height: 600px;
+  display : flex;
+  flex-direction: column;
+  padding-left: 50px;
+  align-items: flex-start;
+  justify-content: center;
+}
+.container {
+  width: 800px;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn a {
+  color : rgba(255, 255, 255, 0.5) ;
+  font-size: 1.7em;
+  margin-top : 25px;
+}
+
+.fleche {
+  width: 30px;
+}
+
+
+/* =============================FOND NOIR & ROSE============================== */
+.fondNoirRose {
+  display : flex;
+}
+
+.fondNoir {
+  height: 150px;
+  width: 800px;
+  margin : 0;
+  background-color : #27212B;
+}
+
+.fondNoir>p {
+  margin : 0;
+  text-align : center ; 
+  color : #9282a0;
+  padding-top : 60px;
+  font-size: 1.5em;
+}
+
+.fondRose {
+  background-color : #bc3183 ;
+  margin : 0;
+  width : calc(100%/4);
+  background-image: url(../images/RightArrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10%;
+}
+
+/* =============================FOND VIOLET & IMAGES============================== */
+.violetImages {
+  display : flex;
+  margin : 0;
+}
+.violet {
+  width: calc(100%/3);
+  background-color :#5b0fa1;
+  background-image: url(../images/RightArrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10%;
+}
+.violetImages figure {
+  max-width: calc(100%/3);
+}
+.violetImages img {
+  display : block;
+}
+/* =============================TEXTE============================== */
+article {
+  background-color: #ebebeb;
+}
+
+h2 {
+  color: #088ca5;
+}
+
+article p {
+  color : #525252;
+}

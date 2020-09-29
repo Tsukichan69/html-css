@@ -134,7 +134,10 @@ p {
   /* Ajout de la transition */
   transition-property: background-color, color;
   transition-duration: 1500ms, 3000ms;
+  transition-delay: 300ms;
   /* la transition permet de ne pas surcharger dans un menu déroulant*/
+  /* équivaut à 
+  transition : background-color 1500ms "function" 300ms, autre propriété*/
 }
 /* On met le lien en hover, sinon l'utilisateur ne pourra pas vraiment cliquer sur le bouton*/
 .btn a:hover, .btn a:focus {

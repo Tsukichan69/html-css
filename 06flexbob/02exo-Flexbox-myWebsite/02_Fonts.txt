@@ -1,0 +1,7 @@
+Polices utilisées : 
+-Montserrat Regular :
+navigation, Bloc Bleu, Titre myWebsite.com et textes paragraphes.
+-Quicksand Bold :
+Bloc violet ("I'm like the Robin Hood of PSD Files.")
+
+Ces polices sont trouvables aussi bien sur Google fonts que sur fontsquirrel... A vous de choisir un moyen d'intégrer ces polices à votre page web.

@@ -1,0 +1,13 @@
+Votre mission, si vous l'acceptez...
+
+...est de réaliser la page dont est issue la capture d'écran "objectifFinal.jpg".
+Le site est prévu pour être en plein écran, pour 1024px.
+
+Vous centrerez la page en taille fixe (de 1024px, donc), ce qui occasionera des marges de chaque côté pour les résolutions plus grandes de 1024px.
+
+Vous choisirez un effet de roll over, que vous appliquerez en utilisant une transition.
+
+Vous trouverez dans les fichiers textes ci-contre les différentes infos dont vous aurez besoin pour réaliser la page (codes couleurs, fonts, et textes brut).
+
+Bonne chance ! 
+^_^
