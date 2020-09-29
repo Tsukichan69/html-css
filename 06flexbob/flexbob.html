@@ -8,54 +8,68 @@
   <title>Flexbox</title>
 </head>
 <body>
-  <!--=====================================BOUTONS=============================================-->
-  <nav>
-      <a href="#">PSD WEBSITES</a>
-    
-      <a href="#">UI KITS</a>
+  <!--Ajouter une div qui contient tout car on ne peut pas centrer, et le body correspond à la fenêtre, on ne donne pas de taille à la fenêtre !-->
+  <div class="global"> <!--penser à mettre en commentaire la classe en fermeture de div pour s'y retrouver-->
+    <!--=====================================BOUTONS=============================================-->
+    <nav>
+      <!--Penser à faire une liste qui regroupe les liens ! -->
+      <ul>
+        <li><a href="#">PSD WEBSITES</a></li>
+        <!--Mieux vaut passer en minuscule et passer en capitales sur le CSS-->
+        <li><a href="#">UI KITS</a></li>
+        <li><a href="#">PREMIUM PSD FILES</a></li>
+        <li><a href="#">ABOUT</a> </li>
+        <li><a href="#">BLOG</a> </li>
+      </ul>
+    </nav>
+    <!--=====================================FOND BLEU=============================================-->
+    <section class = "fondBleu"> <!--section-->
+      <div class="container"> <!--article-->
+        <h1>Awesome Free PSD templates & Resources</h1>
+          <!--Plutôt mettre le nom du site dans un h2 car c'est un titre important pour le référencement
+            (((<div class="btn">
+            <a href="#">www.myWebsite.com</a>
+            <figure class="fleche"><img src="./02exo-Flexbox-myWebsite/images/RightArrow.png" alt="flèche droite"></figure>)))-->
+            <a class="btn" href="#"><h2>www.myWebsite.com</h2><figure class="fleche"><img src="./02exo-Flexbox-myWebsite/images/RightArrow.svg" alt=""></figure></a> <!-- dans le cas d'icon, on peut laisser le alt vide-->
+      </div>
+    </section>
 
-      <a href="#">PREMIUM PSD FILES</a>
+    <!--=====================================FOND NOIR & ROSE=============================================-->
+    <section class="fondNoirRose">
+      <div class="fondNoir">
+      <h3>I'm like the Robin Hood of PSD files.</h3>
+      </div>
+      <div class="fondRose"></div>
+    </section>
 
-      <a href="#">ABOUT</a> 
+    <!--=====================================FOND VIOLET & IMAGES=============================================-->
+    <section class="violetImages">
+      <div class="violet"><!--Ajouter l'image pour faire un lien !--></div>
+      <figure><img src="./02exo-Flexbox-myWebsite/images/Brooklyn-Bridge.jpg" alt="Brooklyn Bridge"></figure>
+      <figure><img src="./02exo-Flexbox-myWebsite/images/happyWf3.jpg" alt="Happy girl"></figure>
+    </section>
 
-      <a href="#">BLOG</a> 
-  </nav>
-  <!--=====================================FOND BLEU=============================================-->
-  <div class = "fondBleu">
-    <div class="container">
-      <h1>Awesome Free PSD templates & Resources</h1>
-        <div class="btn">
-          <a href="#">www.myWebsite.com</a>
-          <figure class="fleche"><img src="./02exo-Flexbox-myWebsite/images/RightArrow.png" alt="flèche droite"></figure>
-        </div>
-    </div>
-  </div>
+    <!--=====================================TEXTE=============================================-->
+    <section class = "text">
+      <h2>myWebsite.com</h2>
+      <article>
+        <!--<h2>myWebsite.com</h2>-->
+        <!--Plutôt couper les paragraphes en deux sections/div pour pouvoir les mettre en colonnes côte à côte du coup on va créer une section qui englobe le tout et on sort le titre pour qu'il ne soit pas dans la flexbox-->
+        <div>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula ipsum non leo tristique eget facilisis lacus commodo. Curabitur vitae justo lorem, non ornare nibh. Pellentesque pretium, tellus ac ultrices faucibus, nibh mauris dapibus lorem, vitae viverra nisl elit sit amet libero. Nam eu blandit risus. </p>
 
-  <!--=====================================FOND NOIR & ROSE=============================================-->
-  <div class="fondNoirRose">
-    <div class="fondNoir">
-    <p>I'm like the Robin Hood of PSD files.</p>
-    </div>
-    <div class="fondRose"></div>
-  </div>
+          <p>Phasellus imperdiet mattis nulla. Integer gravida imperdiet congue. Proin vitae pretium augue. Donec est sem, mattis et blandit ac, blandit at arcu. Donec tempus tincidunt suscipit. Suspendisse eu vulputate lacus.</p>
+      </div>
 
-  <!--=====================================FOND VIOLET & IMAGES=============================================-->
-  <div class="violetImages">
-    <div class="violet"></div>
-    <figure><img src="./02exo-Flexbox-myWebsite/images/Brooklyn-Bridge.jpg" alt="Brooklyn Bridge"></figure>
-    <figure><img src="./02exo-Flexbox-myWebsite/images/happyWf3.jpg" alt="Happy girl"></figure>
-  </div>
+      <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula ipsum non leo tristique eget facilisis lacus commodo. Curabitur vitae justo lorem, non ornare nibh. Pellentesque pretium, tellus ac ultrices faucibus, nibh mauris dapibus lorem, vitae viverra nisl elit sit amet libero. Nam eu blandit risus.</p>
 
-  <!--=====================================TEXTE=============================================-->
-  <article>
-    <h2>myWebsite.com</h2>
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula ipsum non leo tristique eget facilisis lacus commodo. Curabitur vitae justo lorem, non ornare nibh. Pellentesque pretium, tellus ac ultrices faucibus, nibh mauris dapibus lorem, vitae viverra nisl elit sit amet libero. Nam eu blandit risus. </p>
+        <p>Phasellus imperdiet mattis nulla. Integer gravida imperdiet congue. Proin vitae pretium augue. Donec est sem, mattis et blandit ac, blandit at arcu. Donec tempus tincidunt suscipit. Suspendisse eu vulputate lacus.</p>
+      </div>
+      </article>
+  </section>
+</div> <!--global--> 
 
-    <p>Phasellus imperdiet mattis nulla. Integer gravida imperdiet congue. Proin vitae pretium augue. Donec est sem, mattis et blandit ac, blandit at arcu. Donec tempus tincidunt suscipit. Suspendisse eu vulputate lacus.</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula ipsum non leo tristique eget facilisis lacus commodo. Curabitur vitae justo lorem, non ornare nibh. Pellentesque pretium, tellus ac ultrices faucibus, nibh mauris dapibus lorem, vitae viverra nisl elit sit amet libero. Nam eu blandit risus.</p>
-
-    <p>Phasellus imperdiet mattis nulla. Integer gravida imperdiet congue. Proin vitae pretium augue. Donec est sem, mattis et blandit ac, blandit at arcu. Donec tempus tincidunt suscipit. Suspendisse eu vulputate lacus.</p>
-  </article>
+<!--Ajouter les mentions légales est OBLIGATOIRE (75000€ d'amende)-->
 </body>
 </html>

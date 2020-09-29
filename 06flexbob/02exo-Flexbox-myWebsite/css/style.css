@@ -1,99 +1,128 @@
-body {
-  width: 1024px;
-  font-family: 'Montserrat', sans-serif;
+html {
   font-size: 80%;
+}
+body {
+  /*((width: 1024px;))*/
+  font-family: 'Montserrat', sans-serif; /*rajouter Arial, Helvetica qui sont des polices rapprochant*/
+  /*mettre dans le HTML !! Demandé par IE   (((font-size: 80%;)))*/
   margin : 0;
+}
+a {
+  text-decoration: none;
 }
 figure {
   margin : 0;
+}
+.global {
+  width: 1024px;
+  margin : 0 auto; /*Pour centrer automatiquement*/
 }
 figure img {
   max-width: 100%;
   height: auto;
 }
+* {
+  box-sizing: border-box;
+}
+section {
+  padding-left : calc(80/1024*100%);
+}
 /* =============================NAV============================== */
 nav {
   background-color :#373c3f;
-  display: flex;
+  text-transform: uppercase; /*==> Voir dans le HTML*/
+  /*(((display: flex; dans l'ul !!
   justify-content: flex-start ; 
-  align-items: center;
-  height: 100px;
+  align-items: center; 
+  height: 100px;))) ===> Plutôt mettre du padding, ça sera plus responsive*/
+  padding : 20px 0 /*A l'horizontal on n'en veut pas*/;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  width : 60%; /*On donne une taille relative en % pour le responsive, on va pouvoir les espacer ensuite avec flexbox tranquillement*/
+  justify-content: space-between; /*Pour espacer les boutons*/
 }
 
-a {
+/*(((a {
   text-decoration: none;
-}
+})))
+Plutôt mettre dans le général ! */
 
 nav a {
   display: block;
   color : #ebebeb;
-  margin : 0 10px;
-  transition: background-color 1000ms 250ms;
+  /* (((margin : 0 10px;))) */
+  transition-property: background-color, color;
+  transition-duration: 1000ms;
+  transition-delay: 250ms;
   font-size: 1.2em;
 }
-
 nav a:hover, nav a:focus{
-  background-color : grey
+  background-color : grey;
+  color :#0da4ba;
 }
 /* =============================FOND BLEU============================== */
 .fondBleu {
-  background-color : #0da4ba;
-  color : #ffffff; 
-  height: 600px;
+  /* (((background-color : #0da4ba;))) */
+  /*On peut ajouter un dégradé avec cssgradient.io ! */
+  background: rgb(27,180,180); /* Pour les navigateurs (vieux) qui ne comprennent pas le dégradé on garde une sécurité*/
+  background: linear-gradient(130deg, rgba(27,180,180,1) 0%, rgba(8,140,165,1) 100%);
+  /*(((padding-left: 50px;))) Pour le responsive, on va plutôt choisir des % donc faire une règle de trois entre les 80px et les 1024 de la page, on peut l'appliquer directement à toutes les sections car elles sont toutes alignées*/
+  height: 600px; /*On peut mettre plutôt min-height pour gérer l'éventuel texte qui déborderait dans le cas d'un zoom*/
   display : flex;
-  flex-direction: column;
-  padding-left: 50px;
+  /* (((flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: center;))) On peut faire beaucoup plus simple en laissant en ROW et en gérant l'axe secondaire !  */
+  align-items : center;
 }
 .container {
-  width: 800px;
+  width: 800px;/*Mettre en % ! environ 77% */
+  padding-top: 2px; /* La marge du titre va buter contre et donc apparaître et faire le petit décallage*/
 }
-
 h1 {
-  font-size: 5em;
+  font-size: 4.7em;
+  letter-spacing: 0.02em; /* Pour faire l'espace entre les lettres*/
+  word-spacing: 0.1em;
+  color : #ffffff; 
 }
-
 .btn {
   display: flex;
   justify-content: space-between;
+  align-items: baseline; /* va servir à aligner le texte avec l'image ! */
 }
-
-.btn a {
+.btn h2 {
+  font-size: 2.5em;
   color : rgba(255, 255, 255, 0.5) ;
-  font-size: 1.7em;
-  margin-top : 25px;
 }
-
 .fleche {
-  width: 30px;
+  width: 20px;
 }
-
-
 /* =============================FOND NOIR & ROSE============================== */
 .fondNoirRose {
   display : flex;
-}
-
-.fondNoir {
-  height: 150px;
-  width: 800px;
-  margin : 0;
+  height: 245px;
   background-color : #27212B;
 }
 
-.fondNoir>p {
-  margin : 0;
-  text-align : center ; 
+.fondNoir {
+  /* width: 78.125%; */
+  flex-grow: 1; /*va prendre tout l'espace disponible sauf ce qui sera à côté de lui*/
+  display : flex;
+  align-items: center ;
+}
+
+.fondNoir > h3 {
   color : #9282a0;
-  padding-top : 60px;
-  font-size: 1.5em;
+  font-size: 2.25em;
+  font-family: Quicksand;
 }
 
 .fondRose {
   background-color : #bc3183 ;
-  margin : 0;
-  width : calc(100%/4);
+  /* width : 21,875%; */
+  width: 22%;
+  /*Mettre l'image en lien et non pas en background car on aura tendance à cliquer sur le chevron*/
   background-image: url(../images/RightArrow.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -102,32 +131,49 @@ h1 {
 
 /* =============================FOND VIOLET & IMAGES============================== */
 .violetImages {
-  display : flex;
-  margin : 0;
+  display : flex;  
+  padding-left : 0;
+  height: 300px;
 }
 .violet {
   width: calc(100%/3);
   background-color :#5b0fa1;
+  /* Pour mettre en lien et l'image en dimension on va faire :
+  display :flex ;
+  height : 100%;
+  justify-content : center;
+  align-items : center;*/
   background-image: url(../images/RightArrow.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 10%;
 }
 .violetImages figure {
-  max-width: calc(100%/3);
+  width: calc(100%/3); /*Il y a un écart d'un pixel entre les photos car on ne peut pas diviser en nombre entier 1024px, il faudrait diviser et arrondir à la main*/
 }
 .violetImages img {
   display : block;
+  height : 100%;
 }
 /* =============================TEXTE============================== */
-article {
-  background-color: #ebebeb;
+.text {
+  background-color:#ebebeb;
+  padding-top : 20px;
+  padding-bottom : 120px;
+  padding-right : calc(80/1024*100%);
 }
-
 h2 {
   color: #088ca5;
+  font-size: 2em;
 }
-
-article p {
-  color : #525252;
+article {
+  display: flex;
+  justify-content : space-between;
+  color : #515151;
+  font-weight: 700;
+  line-height: 1.3em;
+}
+.text article div {
+  width: 46%;
+  margin-bottom: 2em;
 }
