@@ -1,0 +1,52 @@
+RESTAURANT PRÉVÔT
+
+La page que vous devez réaliser est donnée sur une taille fixe de 1200px, centrée.
+Il y aura des marges sur les côtés (plus ou moins grandes selon l'écran sur lequel il sera consulté).
+
+Les textes passés en rose-orangé sont considérés comme importants.
+ 
+Vous devrez mettre en place des effets de Survol (roll-over) sur le menu de navigation, et sur le lien des mentions légales (footer)
+Appliquez une transition douce sur ces effets.
+
+Pour tous les espaces, marges, ffaites à l'approchant, pas de "pixel perfect" !
+30px est la marge gauche entre le bord du site et les textes.
+Idem pour la marge droite.
+
+===========================================
+
+Polices : (Google font)
+
+Playfair Display : Header, Titres et mentions légales
+Poppins : Textes courants (paragraphes)
+
+===========================================
+
+Codes couleurs : 
+
+---------------- Header  -----------------
+Fond : #665033
+Texte Restaurant Prévôt : #ffd49b
+
+---------------- Navigation -----------------
+fond gris : #bfbfbf
+couleurs texte navigation : #665033
+
+---------------- Partie 1 -----------------
+Fond blanc #fff
+Texte Titre Bienvenue... : #665033
+Textes paragraphes : #222222
+Textes importants dans paragraphe : #ff8d6a
+ombre portée sur photos : #827a7a
+
+---------------- Partie 2 -----------------
+Fond :  #827a7a
+Texte Titre Votre Accueil: #ffd49b
+Textes paragraphes : #222222
+
+---------------- footer -----------------
+Fond :  #2e2c2c
+trait footer : #ffd49bi
+Texte footer: #856f51
+
+
+  

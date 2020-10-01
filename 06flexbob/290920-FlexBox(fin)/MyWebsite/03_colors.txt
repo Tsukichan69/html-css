@@ -1,0 +1,18 @@
+Couleurs des fonds : 
+
+Gris (navigation) : #373c3f
+Bleu Bloc Awesome... : #0da4ba
+Prune (fond I'm like the Robin...) : #27212c
+fuschia : #bc3183
+violet : #5b0fa1
+fond blanc-gris : #ebebeb
+
+
+Couleurs des textes : 
+
+"navigation" : #ebebeb
+"Awesome..." : #fffffff
+"www.myWebsite.com" : #fff à 50% de transparence
+"I'm like the Robin..." : #9282a0
+Titre myWebsite.com : #088ca5
+Textes paragraphes : #515151

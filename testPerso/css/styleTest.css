@@ -1,0 +1,52 @@
+html {
+  font-size: 80%;
+}
+body {
+  margin : 0;
+}
+.container {
+  background-color : rgb(59, 4, 59);
+  width: 1000px;
+  height: 500px;
+  padding : 40px 60px;
+}
+article {
+  display : flex;
+}
+a{
+  text-decoration: none;
+}
+figure{
+  margin: 0;
+}
+figure img {
+  height: 100%;
+  width: 100%;
+}
+section, a {
+  max-width: 25%;
+  box-sizing: border-box;
+}
+a > div {
+  height: 50%;
+  width : 100%;
+  display : flex;
+  flex-direction: column;
+}
+span {
+  color : white;
+  text-align : center;
+  font-size: 2em;
+}
+a figure {
+  height : 50%;
+}
+.icon {
+  padding-top : 40px;
+}
+
+
+
+
+
+/*=======================FIRST BLOCK=================*/

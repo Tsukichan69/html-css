@@ -1,0 +1,158 @@
+/* ==========================================================================
+                                site myWebsite.com
+=============================================================================
+font-family: 'Montserrat', sans-serif;
+font-family: 'Quicksand', sans-serif;
+*/
+
+html {
+    font-size: 80%;
+}
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+ul, figure {
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+section {
+    padding-left: calc(80/1024*100%); /* 80px sur 1024 */
+}
+/* ---------------------------- globale ------------------------------- */
+#global {
+    width: 1024px;
+    margin: 0 auto;
+}
+/* ---------------------------- navigation ------------------------------- */
+nav {
+    background-color: #373c3f;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 50px;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    list-style-type: none;
+    /* background-color: blueviolet; */
+    padding: 40px 0;
+}
+nav a {
+    color: #ebebeb;
+    transition: color 300ms ease-out;
+}
+nav a:hover, nav a:focus {
+    color: #0da4ba;
+}
+/* ---------------------------- awesome ------------------------------- */
+#awesome {
+    background: rgb(27,180,196);
+    background: linear-gradient(193deg, #1bb4c4 0%, #088ca5 100%);
+    color: #fff;
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+}
+#awesome article {
+    width: 77.3%;
+    padding-top: 1px;
+}
+#awesome h1 {
+    font-size: 4.5em;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+#awesome a {
+    display: flex;
+    justify-content: space-between;
+}
+#awesome h2 {
+    font-size: 2.5em;
+    color: #fff;
+    opacity: 0.5;
+}
+#awesome a img {
+    width: 15px;
+}
+/* ---------------------------- Robin ------------------------------- */
+#robin {
+    min-height: 245px;
+    background-color: #27212c;
+    color: #9282a0;
+    display: flex;
+}
+#robin article {
+    flex-grow: 1;
+    /* width: 78.125%; */
+    display: flex;
+    align-items: center;
+}
+#robin div {
+    width: 22%;
+    background-color: #bc3183;
+}
+#robin div img, #blocks div img {
+    width: 20px;
+    display:block;
+}
+#robin h3 {
+    font-size: 2.25em;
+}
+#robin div a, #blocks div a {
+    display:flex;
+    /* width:100%; */
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+/* ---------------------------- 3 blocks ------------------------------- */
+#blocks {
+    display: flex;
+    padding-left: 0;
+    height: 300px;
+}
+#blocks div {
+    flex-grow: 1;
+    background-color: #5b0fa1;
+    /* width: calc(100%/3); */
+}
+#blocks figure {
+    background-color: #5b0fa1;
+    width: 342px;
+    height: 100%;
+}
+#blocks img {
+    max-width: 100%;
+    display: block;
+    height: 100%;
+}
+/* ----------------------------  text ------------------------------- */
+#texts {
+    background-color: #ebebeb;
+    padding: 20px calc(80/1024*100%) 120px calc(80/1024*100%);
+}
+#texts h3 {
+    font-size: 2em;
+    color: #088ca5;
+}
+#texts article {
+    font-weight: bold;
+    color: #515151;
+    line-height: 1.8em;
+    display: flex;
+    justify-content: space-between;
+}
+#texts article div {
+    width: 46%;
+}
+#texts article div p {
+    margin-bottom: 2.5em;
+}

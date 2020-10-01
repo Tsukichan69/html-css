@@ -1,0 +1,159 @@
+html {
+  font-size: 80%;
+}
+body {
+  margin : 0;
+  background-image: url(../images/fond-page.png);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*Ne pas l'oublier ! */
+* {
+  box-sizing: border-box;
+}
+#container {
+  width : 750px;
+  margin : 0 auto;
+}
+ul {
+  list-style-type: none;
+  padding-left:0;
+  margin-bottom:0;
+}
+/*=================================== header ===================================*/
+header {
+  display: flex;
+  align-items: baseline;
+  color : white;
+}/* Pour économiser une règle on peut mettre la taille dans le header et modifier ensuite la taille du p, et lui mettre un margin-left*/
+h1 {
+  font-size: 3em;
+  padding-right: 20px;
+}
+h1+p {
+  font-size: 0.9em;
+}
+/*=================================== box ===================================*/
+#box {
+  display : flex;
+}
+/*=================================== navigation ===================================*/
+/*Plutôt donner la taille à la boîte, donc sur le nav*/
+nav {
+  width: 140px;
+  margin-right : 10px}
+nav ul {
+  padding: 0;
+  margin-top :0;
+}
+/* Plutôt mettre une classe au premier bouton car au changement de page on voudra que ce soit la couleur du bouton du change, et mettre les couleurs et bordures etc aux liens pour gérer le survol ! */
+/* (((.btn a {
+    text-decoration: none;
+    color : black;
+    display : block;
+  }
+.btn li {
+  background-color : #e7e3a0;
+  background: linear-gradient(180deg, rgba(231,227,160,1) 0%, rgba(222,215,124,1) 100%);
+  padding: 5px 10px;
+  border: white 1px solid;
+  border-radius: 3px;
+}
+.btn li+li {
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(198,217,156,1) 100%);
+  margin-top: 6px;
+}))) */
+nav li+li {
+  margin-top: 6px;
+}
+nav a {
+  display: block;
+  background: rgba(198,217,156,1);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(198,217,156,1) 100%);
+  border: white 1px solid;
+  border-radius: 3px;
+  padding: 5px 10px;
+  color: #112726;
+  text-decoration: none;
+}
+nav a:hover, nav a:focus, .actuel /*On ajoute la classe au premier lien car on est sur le premier lien, sur les autres pages ça va changer*/ {
+  background-color : #e7e3a0;
+  background: linear-gradient(180deg, rgba(231,227,160,1) 0%, rgba(222,215,124,1) 100%);
+}
+/*=================================== main ===================================*/
+main {
+  background-color: #cddea1;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /*Pour que le dernier bloc ne soit pas en stretch*/
+  border-radius: 3px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  width: 600px;
+}
+/*=================================== articles ===================================*/
+article {
+  background-color : #ebf1d9;
+  padding: 20px 80px 20px 20px;
+  width: 380px;
+}
+article+article{
+  margin-top : 20px;
+}
+/*=================================== article 1 ===================================*/
+h2{
+  margin: 0;
+  background-color: black;
+  color : white;
+  font-size : 1.2em;
+  padding : 3px;
+  font-weight: 700;
+}
+p {
+  font-size:0.85em;
+  line-height: 1.5em;
+  /* margin-bottom : 0px; *//*Plutôt le faire en moins bourrin*/
+}
+main article p:last-child{
+  margin-bottom: 0;
+}
+/*=================================== article 2 ===================================*/
+.date{
+  font-size: 0.7em;
+  font-weight: 700;
+}
+article li {
+  line-height: 0.9em;
+}
+article li+li {
+  margin-top:0.7em;
+}
+article li a {
+  color: #0f0087;
+  font-size:0.85em;
+}
+/*=================================== article 3 ===================================*/
+.right {
+  width: 160px;
+  padding: 20px 10px;
+}
+ol {
+  padding-left: 16px;
+}
+h3{
+  font-size: 0.9em;
+}
+blockquote {
+  margin : 0;
+}
+blockquote+blockquote {
+  margin-top : 15px;
+}
+blockquote p {
+  margin:0;
+  font-style: italic;
+}
+blockquote p:last-child {
+  font-style: normal;
+  text-align: right;
+}
