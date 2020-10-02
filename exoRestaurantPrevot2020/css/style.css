@@ -1,0 +1,91 @@
+/* ===============POLICES===============
+font-family: 'Playfair Display', serif;
+font-family: 'Poppins', sans-serif;
+*/
+
+html {
+  font-size: 90%;
+}
+body {
+  background-color: grey;
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+/*============================CONTAINER============================*/
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+/*============================HEADER============================*/
+header {
+  display: flex;
+  background-color: #665033;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+h1 {
+  font-size: 4.2em;
+  color: #ffd49b;
+  margin: 15px 50px 20px 50px;
+}
+/*============================NAV============================*/
+nav{
+  background-color: #bfbfbf;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  color: #665033;
+  font-size: 1.3em;
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  padding: 7px 30px;
+  transition-property: background-color, color;
+  transition-duration: 1500ms, 3000ms;
+  transition-delay: 100ms;
+}
+nav a:hover, nav a:focus{
+  background-color: #665033;
+  color: #ffd49b;
+}
+/*============================MAIN============================*/
+main {
+  height: 1350px;
+}
+article {
+  background-color: #fff;
+  padding : 20px 30px 60px 30px;
+  height: 625px;
+}
+h2{
+  margin: 0;
+}
+.block {
+  display: flex;
+}
+section {
+  display: flex;
+}
+figure {
+  margin :0;
+}
+article+article {
+  background-color: #827a7a;
+}
+.left {
+  float: left;
+}
+h3+figure {
+  float: right;
+}
+p{
+  font-family: 'Poppins', sans-serif;
+}
