@@ -6,7 +6,8 @@
   <title>Ma petite entreprise - Nos services innovants</title> <!--Chaque page aura un titre différent pour aider au référencement-->
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<!--Comme on change de page on peut mettre une classe sur le main ou le body pour forcer les changements dans le css-->
+<body class="services">
   <div id="container">
     <!--=================================== header ===================================-->
     <header>
@@ -25,6 +26,37 @@
       </nav>
       <!--=================================== main ===================================-->
       <main>
+        <article>
+          <h2>Les formations de Ma Petite Entreprise</h2>
+          <table> <!--déclarer que c'est un tableau-->
+            <caption>Formations proposées par Ma Petite Entreprise</caption> <!--Légende du tableau, à positionner dans le CSS, car dans le HTML par défaut sera en bas-->
+            <tr> <!--Table Row = Crée une Ligne de tableau-->
+              <th>Intitulé</th> <!-- Table Heading = Crée les titres des colonnes-->
+              <th>Points Forts</th>
+              <th>À noter</th>
+              <th>Tarifs</th>
+            </tr>
+            <tr>
+              <td>Équarrissage pour tous</td> <!--Table data = Crée une cellule-->
+              <td>Collectif et participatif</td>
+              <td>Organisation difficile: 2 dates max dans l'année (nous consulter)</td>
+              <td>2400 € / participant</td>
+            </tr>
+            <tr>
+              <td>Insoutenable légèreté de l'être</td> 
+              <td>Léger et festif</td>
+              <td>Peut provoquer des cas de somnolence</td>
+              <td>1800 € / participant</td>
+            </tr>
+            <tr>
+              <td>Le dépassement de soi</td> 
+              <td>Permet d'arriver plus vite à destination, ne serait-ce que de quelques secondes</td>
+              <td>Attention aux excès de vitesse</td>
+              <td>8990 € / participant</td>
+            </tr>
+          </table>
+          <p>Intéressé par nos services ? <a href="./contact.html">Contactez-nous !</a></p> <!-- Pour faire apparaître un chevron sur la page web on fait &lt; pour le < (less than) et &gt; pour le > (greater than)-->
+        </article>
       </main>
     </div><!--block-->
   </div> <!--Container-->

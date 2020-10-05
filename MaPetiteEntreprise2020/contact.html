@@ -6,7 +6,7 @@
   <title>Ma petite entreprise - Contact</title> <!--Chaque page aura un titre différent pour aider au référencement-->
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="contact">
   <div id="container">
     <!--=================================== header ===================================-->
     <header>
@@ -25,6 +25,46 @@
       </nav>
       <!--=================================== main ===================================-->
       <main>
+        <!--On va reproduire les section et article de la page d'accueil car les paddings et autres tailles sont similaires-->
+        <section>
+          <article>
+            <h2>Nous contacter</h2>
+            <p>(Les champs marqués * sont obligatoires)</p>
+            <form action="traitement.php" method="GET"><!--Ouvre le formulaire--> <!--action va utiliser le php pour envoyer le formulaire--> <!--method explique comment envoyer le formulaire (envoie moins de données en GET et le fait apparaître dans l'URL, le POST envoie + de données et le cache de l'URL)-->
+              <p>
+                <label for="">Nom *</label>
+                <input type="text" name="nom" id="nom" required placeholder="suggestion, comment remplir"> <!--le type permet d'indiquer le type de données (texte, mail, tel, nombre etc), le name permet à PHP de savoir quel input récupérer pour le traiter --- required se met si le champ est obligatoire (on va mettre une * au champ obligatoire pour l'indiquer à l'utilisateur) attention à rendre le formulaire simple quand même ! --- Attention si on met "value" ça prérempli, l'utilisateur devra effacer pour remplacer, ça sert pour forcer la politesse, ou dans le cas d'une commande déjà passée par exemple-->
+              </p>
+              <!--Elles vont se mettre par défaut en côte à côte du coup on les met dans une balise block (la p est parfaite pour ça), comme ça on ne gère pas dans le css-->
+              <p>
+                <label for="">E-mail</label>
+                <input type="email">
+              </p>
+              <p>
+                <label for="sujet">Sujet</label>
+                <select name="sujet" id="sujet">
+                  <option value="produit">Nos produits</option>
+                  <option value="services">Nos services</option>
+                  <option value="insult">Mail d'insultes</option>
+              </select> <!--voir le cours de Laury pour remplir-->
+            </p>
+            <p>
+              <label for="message">Message</label>
+              <textarea name="message" id="message" cols="20" rows="5">Bonjour, <!--Fera office de Value sans le mettre--></textarea> <!--le cols stipule qu'il y aura 30 caractères max en horizontal et le rows en vertical-->
+          </p>
+          <p>
+            <input type="submit"> <!--d'office le value sera "envoyer"-->
+          </p>
+            </form><!--Ferme le formulaire-->
+          </article>
+        </section>
+        <article>
+          <h2>coordonnées</h2>
+          <p>Écrivez-nous aussi à : <br/>
+          <a href="mailto:info@monentreprise.com">info@monentreprise.com</a></p>
+          <p>Ou téléphonez-nous :<br/>
+          <a href="tel:+33123456789">(+33)1 23 45 67 89</a></p>
+        </article>
       </main>
     </div><!--block-->
   </div> <!--Container-->

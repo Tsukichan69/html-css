@@ -102,7 +102,7 @@ article+article{
 }
 /*=================================== article 1 ===================================*/
 h2{
-  margin: 0;
+  margin-top: 0;
   background-color: black;
   color : white;
   font-size : 1.2em;
@@ -133,7 +133,7 @@ article li a {
   font-size:0.85em;
 }
 /*=================================== article 3 ===================================*/
-.right {
+section+article {
   width: 160px;
   padding: 20px 10px;
 }
@@ -156,4 +156,82 @@ blockquote p {
 blockquote p:last-child {
   font-style: normal;
   text-align: right;
+}
+
+/*===================================PAGE===================================*/
+/*===================================SERVICE===================================*/
+.services main article {
+  padding: 20px;
+  width: 100%; /* Pour le forcer à prendre tout l'espace disponible de son container*/
+}
+/*===================================Tableau===================================*/
+caption {
+  caption-side: top; /* Ou Bottom*/
+  margin-bottom: 20px;
+}
+table, td, th {
+  border: 1px solid #adadad;
+  border-collapse: collapse; /* De base c'est en separate*/
+  background-color: #fff; /*tout est en blanc sauf ce qui sera surprécisé*/
+}
+th {
+  text-align: left;
+}
+th, td {
+  padding: 8px;
+  vertical-align: top; /* Ou bottom, ou baseline ou middle */
+}
+tr:nth-of-type(2n) td { /*les td qui sont dans les 2n tr vont avoir cette propriété*/
+background-color: #c9d89b;
+}
+/*===================================Contact===================================*/
+label {
+  display: inline-block; /*Garde certaines caractéristiques des inline (à la suite les unes des autres) et des block (prennent toute la largeur disponible, les marges etc) ça nous permet d'utiliser le width*/
+  min-width: 70px; /*Pour que si on zoome ça zoom aussi*/
+}
+/* label {
+  vertical-align: top;
+}  MAIS on veut juste aligner le label message ! On va donc mettre un sélecteur d'attribut avec []*/
+[for="message"] {
+  vertical-align: top;
+}
+/*On peut sélectionner les attributs selon les caractères spéciaux qu'ils contiennent, par exemple :
+ Les éléments <a> dont href contient "example" 
+a[href*="example"] {
+  font-size: 2em;
+} Va aussi sélectionner exampleStop
+ Les éléments <a> dont href finit par ".org" 
+a[href$=".org"] {
+  font-style: italic;
+}
+ Les éléments <a> dont l'attribut class contient le mot logo 
+comportement identique à a.logo 
+a[class~="logo"] {
+  padding: 2px;
+}Ne sélectionnera pas logoPhoto
+[attr^=valeur]
+Permet de cibler un élément qui possède un attribut attr dont la valeur commence par valeur.*/ 
+input[type="submit"]{
+  margin-left: 70px;
+  border: 1px grey solid;
+  border-radius: 7px;
+}
+textarea, input, select {
+  min-width: 153px;
+}
+form p {
+  display: flex;
+  justify-content: space-between;
+}
+form p:last-child{
+  display: block;
+  text-align: right;
+}
+/*===================================Coordonnées===================================*/
+.contact section+article h2 {
+  font-size: 0.85em;
+}
+.contact a[href^="tel"]{
+  text-decoration: none;
+  color: black;
 }
