@@ -76,3 +76,98 @@ footer {
   color: #eeeeee;
 }
 /*================RWD================*/
+/* toujours mettre le RWD après, pour que lors de la lecture sur smartphone ça aille plus vite */
+/*Requête média : MediaQuery / Mediaqueries */
+@media print { /* Tout ce qui sera dans ces accolades va s'appliquer lorsque mon site va comprendre qu'il est en train de s'imprimer, par exemple, si on veut changer la couleur de fond du header, on va chercher la propriété en faisant un copier coller (voir poids des sélecteurs), attention que lorsque je passe en impression PDF, par défaut certains paramètres sont modifiés, comme la couleur des background qui est supprimée pour ne pas surcharger les imprimantes */
+  header {
+    background-color: black;
+  }
+}
+@media print, speech { /*Uniquement pour les impressions et les lecteurs d'écran, en combiné, les espaces sont gérés automatiquement*/
+}
+/*----------------------640px--------------------*/
+@media screen and (min-width:640px) { /*Lorsque mon site est affiché sur un écran ET avec une largeur minimale de 640px*/
+  html {
+    font-size: 100%;
+  }
+  header {
+    background-color: red;
+  }
+  main article { /*Bien aller chercher au dessus, parce que sinon ça ne fonctionnera pas forcément si on veut contredire quelque chose défini précédemment, car il y a le poids des sélecteurs !*/
+    display: flex;
+  }
+  main figure {
+    width: 30%;
+    margin-right: 2%;
+  }
+  main p{
+    width: 65%;
+  }
+}
+/*----------------------1200px--------------------*/
+@media screen and (min-width:1200px) {
+  /* On va cacher le burger */
+  .burger {
+    display: none;
+  }
+  /*On va afficher la navigation et la styliser*/
+  nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+  nav ul li {
+    width: 25%;
+  }
+  nav ul li a {
+    display: block;
+    background-color: #aaa;
+    text-align: center;
+    padding: 8px 0;
+    color: #000000;
+    transition: color 500ms ease-in-out, background-color 500ms ease-in-out;
+  }
+  nav ul li a:hover, nav ul li a:focus {
+    background-color: #111111;
+    color: #ffffff;
+  }
+  /*================Articles================*/
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  main article {
+    width: 48%;
+    margin-bottom: 10px;
+  }
+  main article+article {
+    margin-top: 0;
+  }
+}
+/*----------------------1200px--------------------*/
+@media screen and (min-width:1600px) { /*On peut aussi mettre min-width:1600px and max-width/2000px si on veut que la couleur ne soit là qu'entre ces deux résolutions par exemple*/
+  /*================Articles================*/
+  main article {
+    width: 22%;
+    /*On réduit les tailles pour que ça prenne un peu moins d'1/4 de l'écran pour avoir de la marge entre les articles*/
+    margin-bottom: 0;
+    display: block;
+  }
+  main figure {
+    width: 60%;
+    float: left;
+    margin-right: 5px;
+  }
+  main p{
+    width: 100%;
+    margin-top: 0;
+  }
+}
+/*----------------------2000px--------------------*/
+@media screen and (min-width:2000px) {
+  /* Pour que le site ne dépasse pas une certaine taille il faut créer une div qui englobe tout*/
+  .wrapper {
+    width: 2000px;
+    margin: 0 auto;
+  }
+}
