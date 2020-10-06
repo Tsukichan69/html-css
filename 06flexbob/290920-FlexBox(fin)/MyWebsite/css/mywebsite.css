@@ -36,6 +36,9 @@ nav {
     font-weight: bold;
     padding-left: 50px;
 }
+#burger {
+    display: none;
+}
 nav ul {
     display: flex;
     justify-content: space-between;
@@ -155,4 +158,100 @@ nav a:hover, nav a:focus {
 }
 #texts article div p {
     margin-bottom: 2.5em;
+}
+/* =============== RWD =============== */
+@media screen and (max-width:640px) {
+    html {
+        font-size: 100%;
+    }
+    #global {
+        width: 100%;
+    }
+    /* ---------------------------- navigation ------------------------------- */
+    nav {
+        position: relative;
+        height: 50px;
+    }
+    #burger {
+        display: block;
+        background-color: #111;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: 0;
+    }
+    #burger a {
+        background-color: white;
+        width: 35px;
+        height: 3px;
+        position: absolute;
+        top: 25px;
+        right: 8px;
+    }
+    #burger a::before, #burger a::after{
+      content: "";
+      position: absolute;
+      background-color: white;
+      width: 35px;
+      height: 3px;
+      top: -13px;
+    }
+    #burger a::after {
+      top: 13px;
+     }
+    nav ul {
+        flex-direction: column;
+        background-color: blueviolet;
+        padding-left: 5%;
+        margin-left: 2%;
+        width: 80vw;
+        height:80vh;
+        position: absolute;
+        left:0;
+        z-index:2;
+        box-shadow: black 5px 5px 5px;
+    } 
+    /* ---------------------------- awesome ------------------------------- */
+    #awesome {
+        min-height: 30vh;
+    }
+    #awesome h1 {
+        font-size: 2em;
+    }
+    #awesome h2 {
+        font-size: 1.5em;
+    }
+    /* ---------------------------- Robin ------------------------------- */
+    #robin {
+        padding: 0;
+    }
+    #robin article {
+        text-align: center;
+    }
+    #robin h3 {
+        font-size: 1.5em;
+    }
+    /* ---------------------------- 3 blocks ------------------------------- */
+    #blocks {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    #blocks div {
+        height: 100vw;
+    }
+    #blocks figure {
+        width: 100vw;
+        height: 100%;
+    }
+    #blocks figure img {
+        width: 100%;
+        height: auto;
+    }
+    /* ----------------------------  text ------------------------------- */
+    #texts article {
+        flex-direction: column;
+    }
+    #texts article div {
+        width: 100%;
+    }
 }

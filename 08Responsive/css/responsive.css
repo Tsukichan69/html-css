@@ -17,6 +17,11 @@ img {
 header {
   background-color: aquamarine;
   padding: 10px 5%; /*On peut mettre des pixels sur la hauteur car elle restera fixe, c'est surtout l'horizontale qui va s'adapter aux écrans*/
+  /*Si on veut que le header prenne toute la hauteur de l'appareil on va utiliser :
+  height: 100vh = 100% viewport height, soit taille de l'appareil
+  Pour la largeur ce serait vw !
+  Si on veut avoir un carré on peut dire que la hauteur fasse 100% de la largeur et inversément avec
+  height:100vw (ou width: 100vh)*/
 }
 header figure {
   height: 100px;
