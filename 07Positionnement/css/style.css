@@ -1,0 +1,109 @@
+/*==================== Positionnement relatif ==================*/
+
+#coucou {
+  width: 300px;
+  height: 200px;
+  background-color: cornflowerblue;
+  position: relative; /* par défault = static */
+  top: 50px;
+  z-index:1; /*par défaut c'est 0, si on met une valeur négative il passera sous TOUTE la page car, par défaut, tout le monde est à 0*/
+  /*
+  - top : on se déplace à partir du haut et on va vers le bas, il va donc recouvrir en partie le p du dessous,
+  - bottom : en partant du bas on monte en valeur positive mais attention il sera contredit par top, donc l'ordre dans le CSS compte
+  - right / left : on va se déplacer sur le côté, mais il n'y aura pas de scroll si l'élément sort de la page, car il est hors du flux
+  CES VALEURS NE FONCTIONNERONT QUE SI ON MET EN POSITIONNEMENT RELATIF*/
+}
+
+/*==================== Positionnement absolu ==================*/
+
+#bleu {
+  width: 400px;
+  height: 300px;
+  background-color: darkblue;
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  /* va se placer par rapport à la fenêtre et pas par au parent, du coup si on réduit la fenêtre il se déplace par rapport à la taille de la fenêtre*/
+  z-index: -1;
+}
+#jaune {
+  width: 600px;
+  height: 600px;
+  background-color: darkgoldenrod;
+  position: relative;
+}
+#rouge{
+  width: 20px;
+  height: 20px;
+  background-color: darkred;
+  position: absolute;
+  top: 0;
+  right: 50px;
+  /* Si on veut placer le bloc rouge dans le jaune, on va mettre un position à jaune. On peut lui mettre absolute ou relative, en fonction de si on veut que le texte passe dessous ou pas. Si on veut que la page garde en mémoire la place du jaune, on le mettra en relative*/
+  /* Un élément en position absolute se place par rapport à son plus proche parent positionné*/
+}
+figure {
+  position: relative;
+  width: 25%;
+  overflow: hidden; /*On cache tout ce qui déborde de la figure, pour que la légende soit cachée par défaut*/
+}
+img {
+  display: block;
+  width: 100%;
+}
+figcaption {
+  position: absolute;
+  left: 10px;
+  background-color: lightgrey;
+  text-align: center;
+  padding : 5px 0;
+  left: 0;
+  right: 0;
+  /*Donner un left et un right à 0 va étirer le block, idem pour top et bottom, à condition que le block soit en absolute et l'autre en relative*/
+/* On veut que la légende apparaisse par le bas au survol*/
+  bottom: -29px;
+  transition : bottom 200ms ease-out;
+}
+figure:hover figcaption {
+  bottom: 0;
+}
+/*==================== em ou rem ? ==================*/
+html {
+  font-size: 100%; /*les paragraphes sont en 16px = 1em*/
+}
+section {
+  background-color: antiquewhite;
+  padding: 50px;
+  font-size: 2em;
+}
+article {
+  background-color: aquamarine;
+  padding: 25px;
+  margin-bottom: 30px;
+  /*font-size: 2em; le paragraphe dans l'article fera 4em car il hérite de ses parents, si on change le HTML en 50%, le paragraphe dans l'article fera 2em, car il hérite de la même manière de ses parents, et le parent global est HTML*/
+  font-size: 2rem; /*REM = Root EM le texte fera la même taille que les 2em de la section, il n'y a pas d'héritage de la section, le seul héritage vient de l'HTML*/
+}
+p {
+  font-size: 1em;
+}
+section div {
+  background-color: pink;
+}
+#intro::before{
+  content: "ceci est l'intro"; /*Propriété obligatoire, on peut la laisser vide*/
+}
+#intro::after {
+  content: "ceci est la fin";
+}
+.citation {
+  position: relative;
+}
+.citation::before{
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: pink;
+  width: 20px;
+  height: 20px;
+}

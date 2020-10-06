@@ -1,0 +1,78 @@
+html {
+  font-size: 90%
+}
+body, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: fuchsia;
+}
+img {
+  width: 100%;
+  display: block;
+}
+/*================header================*/
+header {
+  background-color: aquamarine;
+  padding: 10px 5%; /*On peut mettre des pixels sur la hauteur car elle restera fixe, c'est surtout l'horizontale qui va s'adapter aux écrans*/
+}
+header figure {
+  height: 100px;
+  overflow: hidden;
+}
+header p{
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+/*================navigation================*/
+nav ul {
+  display: none; /*Comme on est sur smartphone on fait disparaitre la nav, on va créer un "burger" (=3 lignes) à la place*/
+}
+.burger {
+  background-color: #333333;
+  width: 30px;
+  height: 3px;
+  position: absolute;
+  top: 25px;
+  right: 23px;
+}
+.burger::before, .burger::after{
+  content: "";
+  position: absolute;
+  background-color: #333333;
+  width: 30px;
+  height: 3px;
+  /*On peut aussi mettre width: inherit et height: inherit pour que ça hérite des parents*/
+  top: -8px;
+}
+.burger::after {
+  top: 8px;
+}
+/*================main================*/
+main {
+  padding: 20px 5%;
+  background-color: slategray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main article {
+  background-color: #333333;
+  padding: 5px;
+  color: #eeeeee;
+}
+main article+article {
+  margin-top: 40px;
+}
+/*================footer================*/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  background-color: rgb(3, 14, 26);
+  color: #eeeeee;
+}
+/*================RWD================*/
