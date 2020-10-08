@@ -1,0 +1,171 @@
+html {
+  font-size: 90%;
+}
+body {
+  background-color: #484848;
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+/*On peut mettre directement les polices dans les généralités
+a, p {
+  font-family: 'Poppins', sans-serif;
+}*/
+/*============================CONTAINER============================*/
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+/*============================HEADER============================*/
+header {
+  display: flex;
+  background-color: #665033;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+h1 {
+  font-size: 4.2em;
+  color: #ffd49b;
+  margin: 15px 50px;
+  font-weight: 400;
+}
+/*Si j'ajoute la figure, il faudra penser à mettre l'img en block*/
+/*============================NAV============================*/
+nav{
+  background-color: #bfbfbf;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  /*Penser à retirer le padding des ul !*/
+}
+a{
+  text-decoration: none;
+  color: #665033;
+  font-size: 1.3em;
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  padding: 7px 30px;/*On peut leur donner une taille à la li avec des % pour que ce soit plus facile à cliquer
+  nav li {
+    width: 25%; (ce qui supprime la ligne justify-content ! mais si on met plus petit en width il faudra mettre un space between)
+    text-align: center;
+  }*/
+  transition-property: background-color, color;
+  transition-duration: 1500ms, 3000ms;
+  transition-delay: 100ms; /* pas nécessaire mais ok ^^ */
+  /*Transition : background-color 1500ms, color 3000ms;*/
+}
+nav a:hover, nav a:focus{
+  background-color: #665033;
+  color: #ffd49b;
+}
+/*============================MAIN============================*/
+main {
+  height: 1400px; /* === BEARK ! Question : que se passe-t-il si on enlève cette propriété?
+  réponse : "rien". Donc elle n'est pas nécessaire, et pire, elle risque de poser problème si le contenu change ou que l'utilisateur grossit les textes (malvoyant par ex.) 
+  ici ce n'est pas le cas, mais si vraiment il y avait besoin de spécifier une hauteur, fais-le plutôt avec min-height, c'est moins pire. (mais c'est vraiiiiiment si besoin, ok ?) === */
+
+}
+/*============================ARTICLES============================*/
+p{
+  font-family: 'Poppins', sans-serif;
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #222222;
+  text-align: justify;
+  font-size: 1.1em;
+  line-height: 2em;
+}
+figure {
+  margin :0 0 0 30px;
+}
+/*============================ARTICLE 1============================*/
+article {
+  background-color: #fff;
+  padding : 30px;
+  height: 750px; /* BEARK ! Question : que se passe-t-il si on enlève cette propriété ? réponse : cela diminue un peu la taille de l'article... du coup : ne vaut-il pas mieux ne pas mettre de height et ajouter un padding-bottom + grand (ou padding : 30px 30px 80px 30px; si tu préfères) , plutôt qu'une hauteur globale ? (réponse : "si") */
+}
+h2{
+  margin-top: 0;
+  color: #665033;
+  font-size: 2.3em;
+  font-weight: 500;
+}
+.block {
+  display: flex;
+}
+/* Du coup on passe en space-between pour que l'espace créé par le width soit étalé entre chaque div et la figure*/
+section {
+  column-count: 3;
+  column-gap: 1.4em;
+}
+/*Si on ajoute des div aux coupures des paragraphes on peut mettre :
+main .block section div {
+  width: 23%;
+} */
+.article1 img {
+  box-shadow: 7px 7px #827a7a;
+  /*si on utilise des % il faudra passer les img en width : 100% sinon elles vont déborder de la figure*/
+}
+.article1 img+img { /* nice one :)*/
+  margin-top: 10px;
+}
+strong {
+  color: #ff8d6a;
+}
+/*============================ARTICLE 2============================*/
+article+article { /* yeah ! */
+  background-color: #827a7a;
+  height: 650px; /* BEARK ! Question : que se passe-t-il si on enlève cette propriété ? réponse : rien... bon tu as compris le truc j'espère... */
+  padding: 20px 30px;
+}
+/*du coup plutôt faire un flex pour avoir l'image à gauche et le reste à droite, en annulant le width 100% pour le passer en auto*/
+.left { /* c'est pas mal audacieux d'avoir testé le flottant pour la mise en page, même si -personnellement- maintenant, j'utilise le flottant que pour le cas de l'autre photo (celle de droite)*/
+  float: left;
+  margin: 0 30px 0 0;
+}
+h3{
+  font-size: 2em;
+  margin-top: 0;
+  color: #ffd49b;
+  font-weight: 500;
+}
+h3+figure { /* combo !!! */
+  float: right;
+}
+article+article p { 
+  text-indent: 2em;
+}
+article+article p:nth-of-type(1), article+article p:nth-of-type(3) { 
+    /* sélecteur qui tue x_x (cool) */
+  margin-bottom:0;
+}
+/*============================FOOTER============================*/
+footer {
+  height: 70px; /* on peut le remplacer par du padding, mieux... */
+  border-top: 3px solid #ffd49b;
+  text-align : center;
+}
+footer a {
+  color: #856f51;
+  font-size: 1.05em;
+  font-family: 'Playfair Display', serif;
+  display: block;
+  height: 70px;
+  padding: 20px;
+  background-color: #2e2c2c;
+  transition-property: background-color, color;
+  transition-duration: 1500ms, 3000ms;
+  transition-delay: 100ms;
+}
+/*Attention que tout n'est pas un lien ! juste les mots "mentions légales" du coup peut être ajouter un soulignement au survol, avec une transformation ?*/
+footer a:hover, footer a:focus {
+  background-color: #856f51;
+  color: #2e2c2c;
+}
+/* Très bon travail, ton rendu est parfait
+Côté CSS, pas grand chose à dire à part tes height à éviter le + possible. Tu utilises plus les commentaires qu'en html, c'est cool. code bien présenté et bien indenté. Bravo */
