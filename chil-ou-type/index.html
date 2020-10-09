@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Child ou Type ?</title>
+  <style>
+    article p:nth-of-type(3), article p:nth-of-type(5){
+      color:red;
+    }
+  </style>
+  <!--Mais si tu veux sélectionner les enfants de type p il faudra mettre :
+  article p:nth-child(3), article p:nth-child(5), il va regarder si le troisième élément est un "p", dans ce cas là non, donc il ne fait rien, puis il va chercher le 5ème, c'est un p, donc il le colorera
+Even = nombres pairs, Odd = impairs-->
+</head>
+<body>
+  <h1>test</h1>
+  <h2>type ou enfant</h2>
+  <article>
+    <h3>gdfgf</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit sit perferendis eum consequatur, porro eos iste nemo illum repellendus!</p>
+    <h3>gdfgf</h3>
+    <p>Facere deleniti, cumque officia odit in corporis amet, id unde quidem at obcaecati voluptates. Dolor ipsa laboriosam quidem totam harum?</p>
+    <h3>gdfgf</h3>
+    <p>Aspernatur minima magni illum beatae tenetur in voluptatum tempore repellat, ab iste, minus fuga accusamus nam. Excepturi officia quis repellendus?</p>
+    <h3>gdfgf</h3>
+    <p>Expedita odio et cupiditate nobis, nesciunt minus nulla quos voluptas, adipisci, quam ipsum quidem mollitia illo accusamus minima ipsam nisi?</p>
+    <h3>gdfgf</h3>
+    <p>Similique laborum omnis magni obcaecati ipsam alias voluptatum minus voluptatem, delectus autem placeat quibusdam quis quae, vel quos quaerat sequi!</p>
+  </article>
+</body>
+</html>
