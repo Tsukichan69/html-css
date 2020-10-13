@@ -1,0 +1,250 @@
+/* ((OTHO)) > COmmentaire général : En vrai utilise des classes pour tes articles. Tu fait beaucoup appel aux selecteurs d'adjacence dans ton fichier. 
+C'est pas 'grave' mais ça reste légèrement plus lent qu'une classe.
+Pas de soucis à utiliser un 'article+article' ou autre, mais des trucs comme 'main article+article figure img ' c'est un peu trop. Par ex pourquoi préciser figure img ? img suffit vu qu'elle sera à priori forcement
+imbriqué dans uen figure dans ton cas à toi. Et mettre une class (ou un ID) garantira de toute façon le 'poids' et donc sa priorité. */
+
+/* ((OTHO)) > Vu que tu as une charte graphique défini, ça vaudrait le coup de définir des variables de couleurs.
+Tu fais comme ça, dans html { } :
+--wheat: wheat; (example simple)
+ou
+--bg__nav: #855044;
+
+Exemple sur le site d'entrainement qu'on a eu :
+(:root correspond à html en réalité ici, mais t'embête pas trop pour ça))
+:root {
+	font-size: 100%;
+
+
+	--bg__cardSection: #fff;
+	--bg__footer: #0a0a0a;
+	--bg__newsSection: #191919;
+	--bg__btn: #f75a3b;
+  --bg__btnHover: #000;
+  
+	--text__navHover: var(--bg__btn);
+	--text__cardSectionTitle: #000;
+	--text__cardSectionSubTitle: #6f6f6f;
+	--text__newsSubTitle: #d7d7d7;
+}
+
+Et donc ensuite tu utilise ta variable comme ça :
+body {
+  background-color: var(--bg__body);
+}
+
+Si c'est pas clair tu me repose la question !
+*/
+/* ((OTHO)) > Good mais tu n'a jamais utilisé de REM dans ton css, c'est dommage (mais c'est pas perdu c'est good tqt !) */
+html {
+  font-size: 100%; 
+}
+body {
+  margin: 0;
+  background-color: #282828;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ((OTHO)) > Je te conseille d'ajouter *::before et *::after si tu compte utiliser ces pseudo élement */
+* {
+  box-sizing: border-box;
+}
+figure {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+ul{ 
+  list-style-type: none;
+}
+/*===========360px===========*/
+/*---------------HEADER---------------*/
+header figure {
+  width: 100vw;
+  background-color: honeydew;
+}
+header figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/*---------------NAV---------------*/
+nav ul {
+  display: flex;
+  align-items: center;
+  background-color: #855044;
+  padding-left: 0; /* ((OTHO)) > Pourquoi ? */
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 50px;
+  z-index: 100;
+  box-shadow: rgba(0,0,0,0.5) 5px 5px 5px;
+}
+nav ul li {
+  text-align: center;
+  width: 35vw;
+}
+nav ul li a {
+  color: black;
+  display: block;
+  padding: 20px 0;
+  transition: color 3000ms ease-in-out, background-color 1500ms ease-in-out; /* ((OTHO)) > Trop long ! */
+}
+nav ul li a:hover, nav ul li a:focus {
+  color: #855044;
+  background-color: black;
+}
+/*---------------ARTICLE 1---------------*/
+main article {
+  color: wheat;
+  padding: 10% 5%;
+}
+main article h1 {
+  margin-top: 0;
+  font-size: 1.8em;
+  font-weight: 400;
+}
+main article p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 100;
+  font-size: 1.1em;
+  line-height: 1.7em;
+  margin-top: 0;
+  color: white;
+}
+main article h2 {
+  font-weight: 400;
+  font-size: 1.4em;
+  margin-top: 40px;
+}
+main article p a {
+  color: #be742e;
+  font-weight: 400;
+}
+main article figure {
+  width: 90vw;
+  height: auto;
+  border: solid white 2px;
+}
+main article figure img {
+  width: 100%;
+}
+main article ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  margin-top: 50px;
+}
+main article ul li {
+  border: solid white 2px;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+}
+main article ul li a {
+  display: block;
+  height: 100%;
+  padding: 60px 0px;
+  color: wheat;
+  transition: background-color 1000ms ease-out;
+}
+main article ul li a:hover, main article ul li a:focus {
+  background-color: #414040;
+}
+/*---------------ARTICLE 2---------------*/
+main article+article {
+  background-color: #333232;
+  text-align: center;
+}
+main article+article h2 {
+  margin: 15px 0;
+}
+main article+article h2+p {
+  margin-bottom: 40px;
+}
+main article+article figure img {
+  display: block;
+}
+/*---------------ARTICLE 3---------------*/
+main article+article+article {
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main article+article+article figure {
+  border: none;
+  text-align: center;
+  width: auto;
+}
+main article+article+article p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+main article+article+article div {
+  display: flex;
+  justify-content: space-evenly;
+}
+main article+article+article div a {
+  width: 30px;
+  height: 30px;
+}
+main article+article+article div a img {
+  width: 100%;
+}
+/*---------------FOOTER---------------*/
+footer {
+  border-top: wheat 3px solid;
+  background-color: #855044;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+footer a {
+  color: wheat;
+  margin-left: 0.7em;
+}
+/*===========640px===========*/
+@media screen and (min-width:640px) {
+  html {
+    font-size: 90%;
+  }
+  nav ul {
+    display: flex;
+    align-items: center;
+    background-color: #855044;
+    padding-left: 0;
+    margin: 0;
+    position: static;
+    width: 100vw;
+    height: 50px;
+    box-shadow: rgba(0,0,0,0.5) 5px 5px 5px;
+  }
+  main article ul li {
+    width: 300px;
+    height: 300px;
+  }
+  main article ul li a {
+    padding: 130px 0px;
+    font-size: 1.5em;
+  }
+  main article+article+article div { /* ((OTHO)) > Je reitère la remarque tout en haut au cas où : trop de selecteurs ! Fait au plus simple avec une class genre main .taClasse div { } */
+    display: flex;
+    align-items: center;
+  }
+  main article+article+article div figure {
+    width: 50%;
+  }
+  main article+article+article div+div a{
+    width: 30%;
+    height: auto;
+  }
+  main article+article+article h3 {
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width:1000px) { /* ((OTHO)) > Plutôt 1024px */
+  
+}

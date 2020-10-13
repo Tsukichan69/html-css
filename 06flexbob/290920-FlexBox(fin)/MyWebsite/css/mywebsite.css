@@ -36,7 +36,7 @@ nav {
     font-weight: bold;
     padding-left: 50px;
 }
-#burger {
+nav div{
     display: none;
 }
 nav ul {
@@ -170,45 +170,52 @@ nav a:hover, nav a:focus {
     /* ---------------------------- navigation ------------------------------- */
     nav {
         position: relative;
-        height: 50px;
+    }
+    nav div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav div p {
+        color: whitesmoke;
     }
     #burger {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: #111;
         width: 50px;
         height: 50px;
         position: absolute;
         right: 0;
     }
-    #burger a {
+    #burger span {
         background-color: white;
-        width: 35px;
-        height: 3px;
-        position: absolute;
-        top: 25px;
-        right: 8px;
+        width: 20px;
+        height: 2px;
+        position: relative;
     }
-    #burger a::before, #burger a::after{
+    #burger span::before, #burger span::after{
       content: "";
       position: absolute;
       background-color: white;
-      width: 35px;
-      height: 3px;
-      top: -13px;
+      width: 20px;
+      height: 2px;
+      top: -8px;
     }
-    #burger a::after {
-      top: 13px;
+    #burger span::after {
+      top: 8px;
      }
     nav ul {
         flex-direction: column;
         background-color: blueviolet;
         padding-left: 5%;
-        margin-left: 2%;
         width: 80vw;
-        height:80vh;
+        height: 80vh;
         position: absolute;
-        left:0;
-        z-index:2;
+        top: 0;
+        left: 20px;
+        z-index: 100;
         box-shadow: black 5px 5px 5px;
     } 
     /* ---------------------------- awesome ------------------------------- */

@@ -1,0 +1,212 @@
+html {
+  font-size: 100%;
+}
+body {
+  margin: 0;
+  background-color: #282828;
+  font-family: 'Montserrat', sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+figure {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+ul{
+  list-style-type: none;
+}
+/*===========360px===========*/
+/*---------------HEADER---------------*/
+header figure {
+  width: 100vw;
+  background-color: honeydew;
+}
+header figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/*---------------NAV---------------*/
+nav ul {
+  display: flex;
+  align-items: center;
+  background-color: #855044;
+  padding-left: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 50px;
+  z-index: 100;
+  box-shadow: rgba(0,0,0,0.5) 5px 5px 5px;
+}
+nav ul li {
+  text-align: center;
+  width: 35vw;
+}
+nav ul li a {
+  color: black;
+  display: block;
+  padding: 20px 0;
+  transition: color 1000ms ease-in-out, background-color 500ms ease-in-out;
+  text-transform: uppercase;
+}
+nav ul li a:hover, nav ul li a:focus {
+  color: #855044;
+  background-color: black;
+}
+/*---------------ARTICLE 1---------------*/
+main article {
+  color: wheat;
+  padding: 10% 5%;
+}
+main article h1 {
+  margin-top: 0;
+  font-size: 1.8em;
+  font-weight: 400;
+}
+main article p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 100;
+  font-size: 1.1em;
+  line-height: 1.7em;
+  margin-top: 0;
+  color: white;
+}
+main article h2 {
+  font-weight: 400;
+  font-size: 1.4em;
+  margin-top: 40px;
+}
+main article p a {
+  color: #be742e;
+  font-weight: 400;
+}
+main article figure {
+  width: 90vw;
+  height: auto;
+  border: solid white 2px;
+}
+main article figure img {
+  width: 100%;
+}
+main article ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  margin-top: 50px;
+}
+main article ul li {
+  border: solid white 2px;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+}
+main article ul li a {
+  display: block;
+  height: 100%;
+  padding: 60px 0px;
+  color: wheat;
+  transition: background-color 1000ms ease-out;
+}
+main article ul li a:hover, main article ul li a:focus {
+  background-color: #414040;
+}
+/*---------------ARTICLE 2---------------*/
+main article+article {
+  background-color: #333232;
+  text-align: center;
+}
+main article+article h2 {
+  margin: 15px 0;
+}
+main article+article h2+p {
+  margin-bottom: 40px;
+}
+main article+article figure img {
+  display: block;
+}
+/*---------------ARTICLE 3---------------*/
+main article+article+article {
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main article+article+article figure {
+  border: none;
+  text-align: center;
+  width: auto;
+}
+main article+article+article p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+main article+article+article div {
+  display: flex;
+  justify-content: space-evenly;
+}
+main article+article+article div a {
+  width: 30px;
+  height: 30px;
+}
+main article+article+article div a img {
+  width: 100%;
+}
+/*---------------FOOTER---------------*/
+footer {
+  border-top: wheat 3px solid;
+  background-color: #855044;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+footer a {
+  color: wheat;
+  margin-left: 0.7em;
+}
+/*===========640px===========*/
+@media screen and (min-width:640px) {
+  html {
+    font-size: 90%;
+  }
+  nav ul {
+    display: flex;
+    align-items: center;
+    background-color: #855044;
+    padding-left: 0;
+    margin: 0;
+    position: static;
+    width: 100vw;
+    height: 50px;
+    box-shadow: rgba(0,0,0,0.5) 5px 5px 5px;
+  }
+  main article ul li {
+    width: 300px;
+    height: 300px;
+  }
+  main article ul li a {
+    padding: 130px 0px;
+    font-size: 1.5em;
+  }
+  main article+article+article div {
+    display: flex;
+    align-items: center;
+  }
+  main article+article+article div figure {
+    width: 50%;
+  }
+  main article+article+article div+div a{
+    width: 30%;
+    height: auto;
+  }
+  main article+article+article h3 {
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width:1000px) {
+
+}

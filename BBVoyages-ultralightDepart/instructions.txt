@@ -1,0 +1,12 @@
+Vous devez donc intégrer la page d'accueil du site "bobo voyages"...
+
+A vous de choisir entre une approche "mobile first" ou "desktop first" et de faire ensuite les 2 autres mises en pages pour les 2 autres résolutions spécifiées.
+
+Les polices de caractères utilisées sont "Raleway" et "Voice of the highlander". Elles sont fournies, et se trouvent dans le dossier de polices.
+
+Dans tous les cas le site est en pleine page. Vous pouvez, si vous le souhaitez fixer le site pour des dimensiosn supérieures à 2000px. Dans ce cas, le site sera centré à une taille fixe de 2000px et sera encadré de marges blanches.
+
+Les éléments du menu de navigation passeront en couleur rouge au survol (#f75a3b).
+Pour les boutons rouges, ils passeront en noir au survol, textes blanc (inchangé).
+
+La couleur du fond de la partie "contactez-nous est en #191919, le footer est sur fond presque noir #0a0a0a.

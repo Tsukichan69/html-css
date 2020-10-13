@@ -1,0 +1,305 @@
+@font-face {
+  font-family: 'liberation_sansbold';
+  src: url('liberationsans-bold-webfont-webfont.woff2') format('woff2'),
+       url('liberationsans-bold-webfont-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'liberation_sansregular';
+  src: url('liberationsans-regular-webfont-webfont.woff2') format('woff2'),
+       url('liberationsans-regular-webfont-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 90%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #1C1C1C;
+  font-family: 'liberation_sansregular', sans-serif;
+}
+a{
+  text-decoration: none;
+  color: #212121;
+}
+#contain_header, #contain_main, #contain_infos, #reseaux {
+  width: 70vw;
+  margin: 0 auto;
+}
+p {
+  color: #212121;
+}
+figure img {
+  display: block;
+}
+/* Petit truc bonus*/
+a:hover {
+  color: #EA9F06;
+} /*J'ai mis sur l'ensemble des a parce que ça va avec le design du site, sinon j'aurai spécifié*/
+/*=====================HEADER=====================*/
+header {
+  background-image: url(../images/background2.jpg);
+  padding: 20px 0 15px 0;
+}
+#contain_header {
+  display: flex;
+  justify-content: space-between;
+}
+/*------------------Logo + Nom------------------*/
+#nom {
+  width: 30%;
+}
+#nom figure {
+  margin: 0;
+}
+#nom figure img {
+  width: 100%;
+}
+#nom p {
+  margin: 15px 0 0 0;
+  font-size: 1.3em;
+}
+#nom p strong {
+  font-weight: 400;
+}
+#nom span {
+  color: #EA9F06;
+}
+/*------------------Info utilisateur-----------------*/
+#utilisateur {
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#utilisateur p {
+  font-size: 1.2em;
+  margin-top: 0;
+}
+#utilisateur nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+#utilisateur nav ul a {
+  display: block;
+  padding: 10px 15px 0 15px;
+}
+/*=====================MAIN=====================*/
+#contain_main {
+  position: relative;
+}
+#contain_main>figure {
+  margin: 14px 0 0 0;
+}
+#contain_main>figure>img {
+  width: 100%;
+}
+main {
+  background-color: #f3f3f3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 30px;
+}
+/*------------------4 ventes-----------------*/
+.vente {
+  width: 40%;
+  margin-bottom: 40px;
+}
+.vente figure {
+  margin: 0;
+  position: relative;
+}
+.vente figure img {
+  width: 100%;
+}
+.vente figure figcaption {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+.vente figure p {
+  color: #EA9F06;
+  font-weight: 700;
+  font-size: 1.5em;
+  background: #292929;
+  position: absolute;
+  right: -20px;
+  top: 10px;
+  margin: 0;
+  padding: 7px;
+  border-radius: 7px;
+}
+.prix {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.CTA {
+  text-align: center;
+  margin-left: 10px;
+  font-size: 0.9em;
+  background: rgb(54,54,54);
+  background: linear-gradient(180deg, rgba(54,54,54,1) 0%, rgba(25,25,25,1) 100%);
+}
+.CTA a {
+  color: #fff;
+  display: block;
+  padding: 5px 25px;
+}
+.prix p {
+  font-size: 1.5em;
+  margin: 10px 0;
+  font-weight: 700;
+}
+.prix .CTA+p{
+  text-decoration: line-through;
+}
+.prix .CTA+p+p {
+  color: #EA9F06;
+}
+/*------------------Bouton central-----------------*/
+#btn {
+  background-color: white;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 7px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#btn ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: 0;
+  padding: 15px;
+}
+#btn ul li a{
+  font-size: 0.8em;
+}
+#btn ul li + li::before {
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  background: #D1D1D1;
+  border-radius: 50%;
+  margin: 0 15px;
+  display: inline-block;
+}
+/*=====================FOOTER=====================*/
+footer {
+  background-color: #373737;
+}
+#contain_infos {
+  padding: 50px 5px 10px 5px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.infos, .infos figure {
+  text-align: center;
+}
+.infos {
+  width: 20%;
+  margin-bottom: 20px;
+}
+.infos figure img {
+  display: inline;
+}
+.infos p {
+  color: #fff;
+  margin: 0;
+  font-size: 0.7em;
+}
+/*------------------Réseaux-----------------*/
+#reseaux {
+  display: flex;
+  justify-content: center;
+  border-top: #818181 3px solid;
+  padding: 20px 0;
+}
+#reseaux a{
+  margin: 0 5%;
+}
+#reseaux+p {
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding-bottom: 15px;
+}
+#reseaux+p a {
+  color: #818181;
+}
+/*==========================================
+=====================RWD=====================
+==========================================*/
+@media screen and (max-width:576px) {
+  html {
+    font-size: 100%;
+  }
+  #contain_header, #contain_main, #contain_infos, #reseaux {
+    width: 90%;
+    margin: 0 auto;
+  }
+  /*=====================HEADER=====================*/
+  #contain_header {
+    flex-direction: column;
+    align-items: center;
+  }
+  /*------------------Logo + Nom------------------*/
+  #nom {
+    width: 70%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  /*------------------Info utilisateur-----------------*/
+  #utilisateur {
+    text-align: start;
+    width: 100%;
+  }
+  #utilisateur nav ul>li a {
+    padding-left: 0;
+  }
+  /*=====================MAIN=====================*/
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  #contain_main>figure {
+    height:40vh;
+  }
+  #contain_main>figure>img {
+    height: 100%;
+    object-fit: cover;
+  }
+  /*------------------4 ventes-----------------*/
+  .vente {
+    width: 70%;
+  }
+  /*------------------Bouton central-----------------*/
+  #btn {
+    width: 90%;
+  }
+  /*=====================FOOTER=====================*/
+  #contain_infos {
+    flex-wrap: wrap;
+  }
+  .infos {
+    width: 48%;
+  }
+}
+/*Monsieur et madame Mandfroid, chauffagistes, ont un fils, comment s'appelle t'il ?
+
+Merci pour ce moment*/
