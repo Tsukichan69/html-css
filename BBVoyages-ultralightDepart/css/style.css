@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'voice_of_the_highlanderRg';
+    src: url('../polices/voice_of_the_highlander/voice_of_the_highlander-webfont.woff2') format('woff2'),
+         url('../polices/voice_of_the_highlander/voice_of_the_highlander-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('../polices/raleway/raleway-bold-webfont.woff2') format('woff2'),
+         url('../polices/raleway/raleway-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ralewayextrabold';
+    src: url('../polices/raleway/raleway-extrabold-webfont.woff2') format('woff2'),
+         url('../polices/raleway/raleway-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ralewayextralight';
+    src: url('../polices/raleway/raleway-extralight-webfont.woff2') format('woff2'),
+         url('../polices/raleway/raleway-extralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ralewayheavy';
+    src: url('../polices/raleway/raleway-heavy-webfont.woff2') format('woff2'),
+         url('../polices/raleway/raleway-heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ralewaylight';
+    src: url('../polices/raleway/raleway-light-webfont.woff2') format('woff2'),
+         url('../polices/raleway/raleway-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ralewaymedium';
+    src: url('../polices/raleway/raleway-medium-webfont.woff2') format('woff2'),
+         url('../polices/raleway/raleway-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('../polices/raleway/raleway-regular-webfont.woff2') format('woff2'),
+         url('../polices/raleway/raleway-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ralewaysemibold';
+    src: url('../polices/raleway/raleway-semibold-webfont.woff2') format('woff2'),
+         url('../polices/raleway/raleway-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ralewaythin';
+    src: url('../polices/raleway/raleway-thin-webfont.woff2') format('woff2'),
+         url('../polices/raleway/raleway-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html{
+	font-size: 100%;
+}
+body {
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+* {
+	box-sizing: border-box;
+}
+
+/* ================== HEADER ================== */
+
+header {
+	background: url(../img/Fd-Header.jpg) center;
+	font-family: 'voice_of_the_highlanderRg', sans-serif;
+	color: white;
+	padding: 15px 5%;
+}
+header p {
+	font-size: 4em;
+	margin: 0;
+}
+nav ul {
+	display: none;
+}
+.burger {
+	background-color: rgba(252, 248, 248, 0.5);
+	width: 50px;
+	height: 50px;
+	border-radius: 6px;
+	position: absolute;
+	top: 35px;
+	right: 23px;
+}
+nav span {
+	background-color: black;
+	width: 30px;
+	height: 3px;
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	border-radius: 15px;
+}
+nav span::before, nav span::after{
+	content: "";
+	position: absolute;
+	background-color: black;
+	width: 30px;
+	height: 3px;
+	top: -8px;
+	border-radius: 15px;
+}
+nav span::after {
+	top: 8px;
+}
+header > span {
+	display: block;
+	text-shadow: 2px 1px rgba(63, 63, 63, 0.5);
+}
+header > span:first-of-type {
+	font-size: 2.8em;
+	margin-top: 70px;
+}
+header > span:nth-of-type(2){
+	font-family: 'ralewaysemibold', serif;
+	font-size: 3.7em;
+	line-height: 0.8em;
+}
+header > span:nth-of-type(3){
+	font-family: 'ralewaysemibold', serif;
+	font-size: 1.3em;
+	margin-top: 40px;
+	line-height: 1.5em;
+	margin-bottom: 70px;
+}
+header > a {
+	background-color: #f75a3b;
+	padding: 15px 25px;
+	margin-bottom: 50px;
+	display: inline-block;
+	border-radius: 50px;
+	font-family: 'ralewaysemibold', serif;
+	text-transform: uppercase;
+	color: white;
+}
+header > a:hover{
+	background-color: #333;
+}
